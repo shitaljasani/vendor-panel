@@ -4,6 +4,7 @@ import { TreoNavigationItem, TreoNavigationService } from '@treo/components/navi
 import { TreoMockApi } from '@treo/lib/mock-api/mock-api.interfaces';
 import { TreoMockApiService } from '@treo/lib/mock-api/mock-api.service';
 import { defaultNavigation } from 'app/data/mock/common/navigation/data';
+import { contacts } from 'app/data/mock/apps/contacts/data';
 
 @Injectable({
     providedIn: 'root'
@@ -12,6 +13,7 @@ export class SearchMockApi implements TreoMockApi
 {
     // Private Readonly
     private readonly _defaultNavigation: TreoNavigationItem[] = defaultNavigation;
+    private readonly _contacts: any[] = contacts;
 
     /**
      * Constructor
@@ -26,6 +28,7 @@ export class SearchMockApi implements TreoMockApi
     {
         // Set the data
         this._defaultNavigation = defaultNavigation;
+        this._contacts = contacts;
 
         // Register the API endpoints
         this.register();
@@ -66,7 +69,9 @@ export class SearchMockApi implements TreoMockApi
                 });
 
                 // Filter the contacts
-            
+                const contactsResults = cloneDeep(this._contacts).filter((user) => {
+                    return user.name.toLowerCase().includes(query);
+                });
 
                 // Create the results array
                 const results = [];
@@ -91,7 +96,26 @@ export class SearchMockApi implements TreoMockApi
                 }
 
                 // If there are contacts results...
-              
+                if ( contactsResults.length > 0 )
+                {
+                    // Normalize the results while marking the found chars
+                    contactsResults.forEach((result) => {
+
+                        // Normalize
+                        result.title = result.name;
+                        result.resultType = 'contact';
+
+                        // Make the found chars bold
+                        const re = new RegExp('(' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ')', 'ig');
+                        result.title = result.title.replace(re, '<mark>$1</mark>');
+
+                        // Add a link
+                        result.link = '/apps/contacts/' + result.id;
+                    });
+
+                    // Add the results to the results object
+                    results.push(...contactsResults);
+                }
 
                 // Return the results
                 return [200, {results}];

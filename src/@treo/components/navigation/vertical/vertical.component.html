@@ -1,9 +1,9 @@
 <div class="treo-vertical-navigation-wrapper">
 
     <!-- Header -->
-    <!-- <div class="treo-vertical-navigation-header">
+    <div class="treo-vertical-navigation-header">
         <ng-content select="[treoVerticalNavigationHeader]"></ng-content>
-    </div> -->
+    </div>
 
     <!-- Content -->
     <div class="treo-vertical-navigation-content"
@@ -12,9 +12,9 @@
          #navigationContent>
 
         <!-- Content header -->
-        <!-- <div class="treo-vertical-navigation-content-header">
+        <div class="treo-vertical-navigation-content-header">
             <ng-content select="[treoVerticalNavigationContentHeader]"></ng-content>
-        </div> -->
+        </div>
 
         <!-- Items -->
         <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
@@ -63,16 +63,16 @@
         </ng-container>
 
         <!-- Content footer -->
-        <!-- <div class="treo-vertical-navigation-content-footer">
+        <div class="treo-vertical-navigation-content-footer">
             <ng-content select="[treoVerticalNavigationContentFooter]"></ng-content>
-        </div> -->
+        </div>
 
     </div>
 
     <!-- Footer -->
-    <!-- <div class="treo-vertical-navigation-footer">
+    <div class="treo-vertical-navigation-footer">
         <ng-content select="[treoVerticalNavigationFooter]"></ng-content>
-    </div> -->
+    </div>
 
 </div>
 

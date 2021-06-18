@@ -14,22 +14,22 @@
     </a>
 
     <!-- Item with an external link -->
-    <!-- <a class="treo-vertical-navigation-item"
+    <a class="treo-vertical-navigation-item"
        *ngIf="item.link && item.externalLink && !item.function && !item.disabled"
        [href]="item.link">
         <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
-    </a> -->
+    </a>
 
     <!-- Item with a function -->
-    <!-- <div class="treo-vertical-navigation-item"
+    <div class="treo-vertical-navigation-item"
          *ngIf="!item.link && item.function && !item.disabled"
          [ngClass]="{'treo-vertical-navigation-item-active-forced': item.active}"
          (click)="item.function(item)">
         <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
-    </div> -->
+    </div>
 
     <!-- Item with an internal link and function -->
-    <!-- <a class="treo-vertical-navigation-item"
+    <a class="treo-vertical-navigation-item"
        *ngIf="item.link && !item.externalLink && item.function && !item.disabled"
        [ngClass]="{'treo-vertical-navigation-item-active-forced': item.active}"
        [routerLink]="[item.link]"
@@ -37,28 +37,28 @@
        [routerLinkActiveOptions]="{exact: item.exactMatch || false}"
        (click)="item.function(item)">
         <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
-    </a> -->
+    </a>
 
     <!-- Item with an external link and function -->
-    <!-- <a class="treo-vertical-navigation-item"
+    <a class="treo-vertical-navigation-item"
        *ngIf="item.link && item.externalLink && item.function && !item.disabled"
        [href]="item.link"
        (click)="item.function(item)">
         <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
-    </a> -->
+    </a>
 
     <!-- Item with a no link and no function -->
-    <!-- <div class="treo-vertical-navigation-item"
+    <div class="treo-vertical-navigation-item"
          *ngIf="!item.link && !item.function && !item.disabled"
          [ngClass]="{'treo-vertical-navigation-item-active-forced': item.active}">
         <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
-    </div> -->
+    </div>
 
     <!-- Item is disabled -->
-    <!-- <div class="treo-vertical-navigation-item treo-vertical-navigation-item-disabled"
+    <div class="treo-vertical-navigation-item treo-vertical-navigation-item-disabled"
          *ngIf="item.disabled">
         <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
-    </div> -->
+    </div>
 
 </div>
 
@@ -81,7 +81,7 @@
     </div>
 
     <!-- Badge -->
-    <!-- <div class="treo-vertical-navigation-item-badge"
+    <div class="treo-vertical-navigation-item-badge"
          *ngIf="item.badge">
         <div class="treo-vertical-navigation-item-badge-content"
              [ngClass]="[(item.badge.style != undefined ? 'treo-vertical-navigation-item-badge-style-' + item.badge.style : ''),
@@ -90,6 +90,6 @@
              [ngStyle]="{'background-color': item.badge.background, 'color': item.badge.color}">
             {{item.badge.title}}
         </div>
-    </div> -->
+    </div>
 
 </ng-template>

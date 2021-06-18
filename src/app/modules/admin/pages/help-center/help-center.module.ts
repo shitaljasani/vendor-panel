@@ -9,12 +9,20 @@ import { TreoMessageModule } from '@treo/components/message';
 import { SharedModule } from 'app/shared/shared.module';
 import { HelpCenterComponent } from 'app/modules/admin/pages/help-center/help-center.component';
 import { HelpCenterFaqsComponent } from 'app/modules/admin/pages/help-center/faqs/faqs.component';
+import { HelpCenterGuidesComponent } from 'app/modules/admin/pages/help-center/guides/guides.component';
+import { HelpCenterGuidesCategoryComponent } from 'app/modules/admin/pages/help-center/guides/category/category.component';
+import { HelpCenterGuidesGuideComponent } from 'app/modules/admin/pages/help-center/guides/guide/guide.component';
+import { HelpCenterSupportComponent } from 'app/modules/admin/pages/help-center/support/support.component';
 import { helpCenterRoutes } from 'app/modules/admin/pages/help-center/help-center.routing';
 
 @NgModule({
     declarations: [
         HelpCenterComponent,
         HelpCenterFaqsComponent,
+        HelpCenterGuidesComponent,
+        HelpCenterGuidesCategoryComponent,
+        HelpCenterGuidesGuideComponent,
+        HelpCenterSupportComponent
     ],
     imports     : [
         RouterModule.forChild(helpCenterRoutes),

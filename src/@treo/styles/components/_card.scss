@@ -28,6 +28,7 @@ treo-card {
         &.modern-alt {
             max-width: 1200px;
             width: calc(100% - 16px);
+            display: block;
 
             @include treo-breakpoint('lt-md') {
                 width: auto;
