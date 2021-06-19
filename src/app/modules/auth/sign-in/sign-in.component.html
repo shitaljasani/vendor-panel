@@ -1,5 +1,5 @@
 <div class="content-layout fullwidth-basic-normal-scroll">
-    <treo-card class="auth-card modern">
+    <treo-card class="auth-card">
         <!-- Form container -->
         <div class="form-container">
             <div class="form">
@@ -20,23 +20,23 @@
                         <form>
                             <mat-form-field>
                                 <mat-label>Mobile number</mat-label>
-                                <input matInput placeholder="Last name, First name" required>
+                                <input matInput placeholder="Enter Mobile number" required>
                             </mat-form-field>
                             <mat-form-field>
                                 <mat-label>Shop Owner Name</mat-label>
-                                <input matInput placeholder="Last name, First name" required>
+                                <input matInput placeholder="Enter Shop Owner Name" required>
                             </mat-form-field>
                             <mat-form-field>
                                 <mat-label>Shop Name</mat-label>
-                                <input matInput placeholder="Last name, First name" required>
+                                <input matInput placeholder="Enter Shop Name" required>
                             </mat-form-field>
                             <mat-form-field>
                                 <mat-label>Email</mat-label>
-                                <input matInput placeholder="Last name, First name" required>
+                                <input matInput placeholder="Enter Email" required>
                             </mat-form-field>
                             <mat-form-field>
                                 <mat-label>Password</mat-label>
-                                <input matInput placeholder="Last name, First name" required>
+                                <input matInput placeholder="Enter Password" required>
                             </mat-form-field>
                             <div class="flex gt-xs:flex-row flex-auto">
                                 <button class="add-btn mat-flat-button mat-primary" mat-flat-button
@@ -49,21 +49,38 @@
                     <mat-step>
                         <!-- #enddocregion label -->
                         <form>
+                            <div class='upload-wrapper'>
+                              <label class='matlbl'>Shop Cover Image</label>
+                              <div class='fileinput'(click)="fileInput.click()">
+                              <input  class='filedata' hidden #fileInput type="file" id="file">
+                                <span>+ </span>
+                              </div>
+                            </div>
+                            <div class='upload-wrapper'>
+                              <label class='matlbl'>Shop Cover Image</label>
+                              <div class='fileinput'(click)="fileInput1.click()">
+                              <input  class='filedata' hidden #fileInput1 type="file" id="file1">
+                                <span>+ </span>
+                              </div>
+                            </div> 
+                            
+                           <div class='clear'></div>
+                        
+                        
+                        
                             <mat-form-field>
                                 <mat-label>Address</mat-label>
-                                <input matInput placeholder="Ex. 1 Main St, New York, NY" required>
+                                <input matInput placeholder="Enter Address" required>
                             </mat-form-field>
                             <mat-form-field>
                                 <mat-label>Gst Number</mat-label>
-                                <input matInput placeholder="Ex. 1 Main St, New York, NY" required>
+                                <input matInput placeholder="Enter Gst Number" required>
                             </mat-form-field>
                             <mat-form-field>
                                 <mat-label>Location</mat-label>
-                                <input matInput placeholder="Ex. 1 Main St, New York, NY" required>
+                                <input matInput placeholder="Enter Location" required>
                             </mat-form-field>
                             <div class="flex flex-row items-center">
-                                <button class="add-btn mat-flat-button mat-primary" mat-flat-button
-                                    matStepperPrevious>Back</button>
                                 <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
                                     matStepperNext>Next</button>
                             </div>
@@ -72,21 +89,30 @@
 
                     <mat-step>
                         <form>
-                            <p>You are now done.</p>
                             <div class="flex gt-xs:flex-row flex-auto">
-                                <button class="add-btn mat-flat-button mat-primary" mat-flat-button
-                                    matStepperPrevious>Back</button>
-                                <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
-                                    (click)="stepper.reset()">Reset</button>
+                              <div class='upload-wrapper'>
+                                <label class='matlbl'>Adhar Front image</label>
+                                <div class='fileinput'(click)="fileInput.click()">
+                                <input  class='filedata' hidden #fileInput type="file" id="file">
+                                  <span>+ </span>
+                                </div>
+                              </div>
+                              <div class='upload-wrapper'>
+                                <label class='matlbl'>Adhar Back image</label>
+                                <div class='fileinput'(click)="fileInput1.click()">
+                                <input  class='filedata' hidden #fileInput1 type="file" id="file1">
+                                  <span>+ </span>
+                                </div>
+                              </div> 
+                              
+                             <div class='clear'></div>
+
                             </div>
+                            <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
+                                (click)="stepper.reset()">Submit</button>
                         </form>
                     </mat-step>
                 </mat-horizontal-stepper>
-            </div>
-
-            <div class="subtitle">
-                <span>Don't have an account? </span>
-                <a class="link" [routerLink]="['/sign-up']">Sign up</a>
             </div>
         </div>
     </treo-card>
