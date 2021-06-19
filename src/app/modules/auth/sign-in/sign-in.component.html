@@ -32,22 +32,57 @@
                 <mat-horizontal-stepper  #stepper>
                     <mat-step >
                       <form >
-                        <ng-template matStepLabel>Fill out your name</ng-template>
-                        <mat-form-field>
-                          <mat-label>Name</mat-label>
-                          <input matInput placeholder="Last name, First name" required>
-                        </mat-form-field>
+                        
+                          <mat-form-field>
+                            <mat-label>Mobile number</mat-label>
+                            <input matInput placeholder="Last name, First name" required>
+                          </mat-form-field>
+                        
+                        
+                          <mat-form-field>
+                            <mat-label>Shop Owner Name</mat-label>
+                            <input matInput placeholder="Last name, First name" required>
+                          </mat-form-field>
+                        
+                        
+                          <mat-form-field>
+                            <mat-label>Shop Name</mat-label>
+                            <input matInput placeholder="Last name, First name" required>
+                          </mat-form-field>
+                        
+                        
+                          <mat-form-field>
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Last name, First name" required>
+                          </mat-form-field>
+                        
+                        
+                          <mat-form-field>
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Last name, First name" required>
+                          </mat-form-field>
+                        
                         <div>
                           <button mat-button matStepperNext>Next</button>
                         </div>
                       </form>
                     </mat-step>
                     <!-- #docregion label -->
-                    <mat-step  label="Fill out your address">
+                    <mat-step >
                     <!-- #enddocregion label -->
                       <form>
                         <mat-form-field>
                           <mat-label>Address</mat-label>
+                          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <mat-form-field>
+                          <mat-label>Gst Number</mat-label>
+                          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <mat-form-field>
+                          <mat-label>Location</mat-label>
                           <input matInput  placeholder="Ex. 1 Main St, New York, NY"
                                  required>
                         </mat-form-field>
@@ -58,7 +93,7 @@
                       </form>
                     </mat-step>
                     <mat-step>
-                      <ng-template matStepLabel>Done</ng-template>
+                    
                       <p>You are now done.</p>
                       <div>
                         <button mat-button matStepperPrevious>Back</button>
