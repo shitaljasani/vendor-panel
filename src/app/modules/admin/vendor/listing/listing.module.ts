@@ -14,12 +14,12 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDividerModule } from '@angular/material/divider';
-import { ListingComponent } from 'app/modules/admin/vendor/listing/listing.component';
+import { ListingComponent,AddProduct } from 'app/modules/admin/vendor/listing/listing.component';
 import { ListingRoutes } from 'app/modules/admin/vendor/listing/listing.routing';
-
 @NgModule({
     declarations: [
-        ListingComponent
+        ListingComponent,
+        AddProduct
     ],
     imports     : [
         RouterModule.forChild(ListingRoutes),
@@ -41,7 +41,8 @@ import { ListingRoutes } from 'app/modules/admin/vendor/listing/listing.routing'
         MatTabsModule,
         MatDividerModule,
         SharedModule
-    ]
+    ],
+    entryComponents: [AddProduct]
 })
 export class ListingModule
 {

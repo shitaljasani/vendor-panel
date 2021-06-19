@@ -50,6 +50,8 @@ export const appRoutes: Route[] = [
     // Landing routes
     {
         path: '',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
         component  : LayoutComponent,
         data: {
             layout: 'empty'
@@ -62,8 +64,8 @@ export const appRoutes: Route[] = [
     // Admin routes
     {
         path       : '',
-        canActivate: [NoAuthGuard],
-        canActivateChild: [NoAuthGuard],
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
         component  : LayoutComponent,
         resolve    : {
             initialData: InitialDataResolver,

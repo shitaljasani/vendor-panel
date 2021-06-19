@@ -11,7 +11,7 @@ import { TreoMessageModule } from '@treo/components/message';
 import { SharedModule } from 'app/shared/shared.module';
 import { AuthSignUpComponent } from 'app/modules/auth/sign-up/sign-up.component';
 import { authSignupRoutes } from 'app/modules/auth/sign-up/sign-up.routing';
-
+import {MatStepperModule} from '@angular/material/stepper';
 @NgModule({
     declarations: [
         AuthSignUpComponent
@@ -26,7 +26,8 @@ import { authSignupRoutes } from 'app/modules/auth/sign-up/sign-up.routing';
         MatProgressSpinnerModule,
         TreoCardModule,
         TreoMessageModule,
-        SharedModule
+        SharedModule,
+        MatStepperModule
     ]
 })
 export class AuthSignUpModule

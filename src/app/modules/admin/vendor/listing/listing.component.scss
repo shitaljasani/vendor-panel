@@ -37,3 +37,34 @@
         }
     }
 }
+mat-form-field{
+    width:100%;
+}
+.upload-wrapper{
+    display: inline-block;
+    margin-right: 100px;
+    .matlbl{
+        color: #27303f;
+        font-weight: 500;
+
+    }
+    .fileinput{
+        border: 1px solid #e2e8f0;
+        height: 100px;
+        width: 100%;
+        border-radius: 6px;
+        margin: 5px 0 16px 0;
+        position: relative;
+        .filedata{
+            height: 100px;
+            opacity: 0;
+        }
+        span{
+            position: absolute;
+            left: 40%;
+            top: 15%;
+            font-size: 39px;
+            font-weight: 500;
+        }
+    }
+}

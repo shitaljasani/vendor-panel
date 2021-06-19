@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { TreoAnimations } from '@treo/animations';
 import { AuthService } from 'app/core/auth/auth.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector     : 'auth-sign-up',
@@ -11,32 +12,29 @@ import { AuthService } from 'app/core/auth/auth.service';
     encapsulation: ViewEncapsulation.None,
     animations   : TreoAnimations
 })
-export class AuthSignUpComponent implements OnInit, OnDestroy
+export class AuthSignUpComponent implements OnInit
 {
+    signInForm: FormGroup;
     message: any;
-    signUpForm: FormGroup;
-
-    // Private
-    private _unsubscribeAll: Subject<any>;
 
     /**
      * Constructor
      *
+     * @param {ActivatedRoute} _activatedRoute
      * @param {AuthService} _authService
      * @param {FormBuilder} _formBuilder
+     * @param {Router} _router
      */
     constructor(
+        private _activatedRoute: ActivatedRoute,
         private _authService: AuthService,
-        private _formBuilder: FormBuilder
+        private _formBuilder: FormBuilder,
+        private _router: Router
     )
     {
         // Set the defaults
         this.message = null;
-
-        // Set the private defaults
-        this._unsubscribeAll = new Subject();
     }
-
     // -----------------------------------------------------------------------------------------------------
     // @ Lifecycle hooks
     // -----------------------------------------------------------------------------------------------------
@@ -44,28 +42,17 @@ export class AuthSignUpComponent implements OnInit, OnDestroy
     /**
      * On init
      */
-    ngOnInit(): void
-    {
-        // Create the form
-        this.signUpForm = this._formBuilder.group({
-                name      : ['', Validators.required],
-                email     : ['', [Validators.required, Validators.email]],
-                password  : ['', Validators.required],
-                company   : [''],
-                agreements: ['', Validators.requiredTrue]
-            }
-        );
-    }
-
-    /**
-     * On destroy
-     */
-    ngOnDestroy(): void
-    {
-        // Unsubscribe from all subscriptions
-        this._unsubscribeAll.next();
-        this._unsubscribeAll.complete();
-    }
+     ngOnInit(): void
+     {
+         // Create the form
+         this.signInForm = this._formBuilder.group({
+             email     : ['watkins.andrew@company.com'],
+             password  : ['admin'],
+             rememberMe: ['']
+         });
+     }
+ 
+    
 
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
@@ -74,39 +61,43 @@ export class AuthSignUpComponent implements OnInit, OnDestroy
     /**
      * Sign up
      */
-    signUp(): void
-    {
-        // Do nothing if the form is invalid
-        if ( this.signUpForm.invalid )
-        {
-            return;
-        }
-
-        // Disable the form
-        this.signUpForm.disable();
-
-        // Hide the message
-        this.message = null;
-
-        // Do your action here...
-
-        // Emulate server delay
-        setTimeout(() => {
-
-            // Re-enable the form
-            this.signUpForm.enable();
-
-            // Reset the form
-            this.signUpForm.reset({});
-
-            // Show the message
-            this.message = {
-                appearance: 'outline',
-                content   : 'Your account has been created and a confirmation mail has been sent to your email address.',
-                shake     : false,
-                showIcon  : false,
-                type      : 'success'
-            };
-        }, 1000);
-    }
+     signIn(): void
+     {
+         // Disable the form
+         this.signInForm.disable();
+ 
+         // Hide the message
+         this.message = null;
+            console.log('123')
+         // Get the credentials
+         const credentials = this.signInForm.value;
+ 
+         // Sign in
+         this._authService.signIn(credentials)
+             .subscribe(() => {
+ 
+                 // Set the redirect url.
+                 // The '/signed-in-redirect' is a dummy url to catch the request and redirect the user
+                 // to the correct page after a successful sign in. This way, that url can be set via
+                 // routing file and we don't have to touch here.
+                 const redirectURL = this._activatedRoute.snapshot.queryParamMap.get('redirectURL') || '/signed-in-redirect';
+ 
+                 // Navigate to the redirect url
+                 this._router.navigateByUrl(redirectURL);
+ 
+             }, (response) => {
+ 
+                 // Re-enable the form
+                 this.signInForm.enable();
+ 
+                 // Show the error message
+                 this.message = {
+                     appearance: 'outline',
+                     content   : response.error,
+                     shake     : true,
+                     showIcon  : false,
+                     type      : 'error'
+                 };
+             });
+     }
 }
