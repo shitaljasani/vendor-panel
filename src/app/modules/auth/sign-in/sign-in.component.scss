@@ -15,6 +15,21 @@ auth-sign-in {
                     min-width: 100%;
                     max-width: 100%;
                 }
+                
+                .mat-step-header.mat-horizontal-stepper-header {
+                    height: auto;
+                    padding: 0;
+                    .mat-step-icon {
+                        margin-right:0px;
+                    }
+                    .mat-step-label {
+                        display: none;
+                    }
+                }
+
+                .subtitle, .title {
+                    text-align: center;
+                }
             }
         }
     }

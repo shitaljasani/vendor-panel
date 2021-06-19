@@ -1,114 +1,94 @@
 <div class="content-layout fullwidth-basic-normal-scroll">
-
     <treo-card class="auth-card modern">
-
         <!-- Form container -->
         <div class="form-container">
-
             <div class="form">
-
                 <!-- Logo -->
-                <div class="logo">
+                <!-- <div class="logo">
                     <img src="assets/images/logo/logo.svg">
-                </div>
+                </div> -->
 
                 <!-- Title -->
-                <div class="title">Sign in</div>
-                <div class="subtitle">
-                    <span>Don't have an account?</span>
-                    <a class="link"
-                       [routerLink]="['/sign-up']">Sign up</a>
-                </div>
-
+                <div class="title mb-10">Sign in</div>
                 <!-- Message -->
-                <treo-message *ngIf="message"
-                             [appearance]="message.appearance"
-                             [showIcon]="message.showIcon"
-                             [type]="message.type"
-                             [@shake]="message.shake">
+                <treo-message *ngIf="message" [appearance]="message.appearance" [showIcon]="message.showIcon"
+                    [type]="message.type" [@shake]="message.shake">
                     {{message.content}}
                 </treo-message>
-
-                <mat-horizontal-stepper  #stepper>
-                    <mat-step >
-                      <form >
-                        
-                          <mat-form-field>
-                            <mat-label>Mobile number</mat-label>
-                            <input matInput placeholder="Last name, First name" required>
-                          </mat-form-field>
-                        
-                        
-                          <mat-form-field>
-                            <mat-label>Shop Owner Name</mat-label>
-                            <input matInput placeholder="Last name, First name" required>
-                          </mat-form-field>
-                        
-                        
-                          <mat-form-field>
-                            <mat-label>Shop Name</mat-label>
-                            <input matInput placeholder="Last name, First name" required>
-                          </mat-form-field>
-                        
-                        
-                          <mat-form-field>
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder="Last name, First name" required>
-                          </mat-form-field>
-                        
-                        
-                          <mat-form-field>
-                            <mat-label>Password</mat-label>
-                            <input matInput placeholder="Last name, First name" required>
-                          </mat-form-field>
-                        
-                        <div>
-                          <button mat-button matStepperNext>Next</button>
-                        </div>
-                      </form>
-                    </mat-step>
-                    <!-- #docregion label -->
-                    <mat-step >
-                    <!-- #enddocregion label -->
-                      <form>
-                        <mat-form-field>
-                          <mat-label>Address</mat-label>
-                          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
-                                 required>
-                        </mat-form-field>
-                        <mat-form-field>
-                          <mat-label>Gst Number</mat-label>
-                          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
-                                 required>
-                        </mat-form-field>
-                        <mat-form-field>
-                          <mat-label>Location</mat-label>
-                          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
-                                 required>
-                        </mat-form-field>
-                        <div>
-                          <button mat-button matStepperPrevious>Back</button>
-                          <button mat-button matStepperNext>Next</button>
-                        </div>
-                      </form>
-                    </mat-step>
+                <mat-horizontal-stepper #stepper>
                     <mat-step>
-                    
-                      <p>You are now done.</p>
-                      <div>
-                        <button mat-button matStepperPrevious>Back</button>
-                        <button mat-button (click)="stepper.reset()">Reset</button>
-                      </div>
+                        <form>
+                            <mat-form-field>
+                                <mat-label>Mobile number</mat-label>
+                                <input matInput placeholder="Last name, First name" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Shop Owner Name</mat-label>
+                                <input matInput placeholder="Last name, First name" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Shop Name</mat-label>
+                                <input matInput placeholder="Last name, First name" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Email</mat-label>
+                                <input matInput placeholder="Last name, First name" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="Last name, First name" required>
+                            </mat-form-field>
+                            <div class="flex gt-xs:flex-row flex-auto">
+                                <button class="add-btn mat-flat-button mat-primary" mat-flat-button
+                                    matStepperNext>Next</button>
+                            </div>
+                        </form>
                     </mat-step>
-                  </mat-horizontal-stepper>
 
-                  
-        
+                    <!-- #docregion label -->
+                    <mat-step>
+                        <!-- #enddocregion label -->
+                        <form>
+                            <mat-form-field>
+                                <mat-label>Address</mat-label>
+                                <input matInput placeholder="Ex. 1 Main St, New York, NY" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Gst Number</mat-label>
+                                <input matInput placeholder="Ex. 1 Main St, New York, NY" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Location</mat-label>
+                                <input matInput placeholder="Ex. 1 Main St, New York, NY" required>
+                            </mat-form-field>
+                            <div class="flex flex-row items-center">
+                                <button class="add-btn mat-flat-button mat-primary" mat-flat-button
+                                    matStepperPrevious>Back</button>
+                                <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
+                                    matStepperNext>Next</button>
+                            </div>
+                        </form>
+                    </mat-step>
 
+                    <mat-step>
+                        <form>
+                            <p>You are now done.</p>
+                            <div class="flex gt-xs:flex-row flex-auto">
+                                <button class="add-btn mat-flat-button mat-primary" mat-flat-button
+                                    matStepperPrevious>Back</button>
+                                <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
+                                    (click)="stepper.reset()">Reset</button>
+                            </div>
+                        </form>
+                    </mat-step>
+                </mat-horizontal-stepper>
             </div>
 
+            <div class="subtitle">
+                <span>Don't have an account? </span>
+                <a class="link" [routerLink]="['/sign-up']">Sign up</a>
+            </div>
         </div>
-
     </treo-card>
 
 </div>
