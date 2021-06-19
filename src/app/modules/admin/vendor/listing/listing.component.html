@@ -1,0 +1,58 @@
+<div class="center-spacing bg-dialog  bg-card">
+    <div class="center-card">
+        <div class="header">
+            <mat-form-field>
+                <mat-select [placeholder]="'Filter'">
+                    <mat-option [value]="'category'">fsdf</mat-option>
+                    <mat-option [value]="'category'">fsdf</mat-option>
+                    <mat-option [value]="'category'">fsdf</mat-option>
+                    <mat-option [value]="'category'">fsdf</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="right_part">
+                <form class="flex">
+                    <mat-form-field class="gt-xs:pr-3">
+                        <input matInput [(ngModel)]="search" [ngModelOptions]="{standalone: true}" [placeholder]="'Search'">
+                        <a *ngIf="search.length != 0">
+                            <mat-icon class="search-icon" matSuffix [svgIcon]="'heroicons_solid:close-icon'"></mat-icon>
+                        </a>
+                    </mat-form-field>
+                </form>
+                <button class="mat-flat-button mat-primary ml-2" mat-flat-button >Add Listing</button>
+                <!-- <div class="clear"></div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="center-card flex">
+        <div class="list_part">
+            <div class="list_item">
+                <img src="assets/images/cards/11-512x512.jpg"/>
+                <span>SKU</span>
+                <span>Price</span>
+            </div>
+            <div class="list_item">
+                <img src="assets/images/cards/01-320x200.jpg"/>
+                <span>SKU</span>
+                <span>Price</span>
+            </div>
+            <div class="list_item">
+                <img src="assets/images/cards/11-512x512.jpg"/>
+                <span>SKU</span>
+                <span>Price</span>
+            </div>
+            <div class="list_item">
+                <img src="assets/images/cards/11-512x512.jpg"/>
+                <span>SKU</span>
+                <span>Price</span>
+            </div>
+        </div>
+        <div class="list_status_part">
+            <h5>Listing Status</h5>
+            <a>Active</a>
+            <a>Out of stock</a>
+            <a>Temporary stock out</a>
+            <a>Inactive</a>
+        </div>
+    </div>
+</div>
