@@ -159,7 +159,14 @@ h6 {
 a {
     color: inherit;
     text-decoration: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
 }
+
 
 /**
  * Reset form element properties that are easy to forget to

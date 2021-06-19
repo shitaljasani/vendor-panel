@@ -1036,13 +1036,13 @@ export const defaultNavigation: TreoNavigationItem[] = [
     }
 ];
 export const compactNavigation: TreoNavigationItem[] = [
-    {
-        id   : 'dashboard',
-        title: 'Dashboard',
-        type : 'basic',
-        icon : 'heroicons_outline:home',
-        link : '/dashboards'
-    },
+    // {
+    //     id   : 'dashboard',
+    //     title: 'Dashboard',
+    //     type : 'basic',
+    //     icon : 'heroicons_outline:home',
+    //     link : '/dashboards'
+    // },
     {
         id   : 'listing',
         title: 'Listing',
