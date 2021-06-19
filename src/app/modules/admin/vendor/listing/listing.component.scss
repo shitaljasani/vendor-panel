@@ -43,6 +43,10 @@
 mat-form-field{
     width:100%;
 }
+.addproduct{
+    display: flex;
+    justify-content: space-between;
+}
 .upload-wrapper{
     display: inline-block;
     margin-right: 100px;
@@ -67,6 +71,36 @@ mat-form-field{
             left: 40%;
             top: 15%;
             font-size: 39px;
+            font-weight: 500;
+        }
+    }
+}
+.closebtn{
+    
+}
+.upload-wrapper1{
+    display: inline-block;
+    .matlbl{
+        color: #27303f;
+        font-weight: 500;
+
+    }
+    .fileinput{
+        border: 1px solid #e2e8f0;
+        height: 48px;
+        width: 100%;
+        border-radius: 6px;
+        margin: 5px 0 16px 0;
+        position: relative;
+        .filedata{
+            height: 48px;
+            opacity: 0;
+        }
+        span{
+            position: absolute;
+            left: 28%;
+            top: 4%;
+            font-size: 25px;
             font-weight: 500;
         }
     }

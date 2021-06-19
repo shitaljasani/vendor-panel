@@ -42,9 +42,19 @@ export class AddProduct {
   constructor(
     public dialogRef: MatDialogRef<AddProduct>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
+    productdata=[{
+      SKU:'',
+      Price:'',
+      name:''
+    }]
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  add(){
+    this.productdata.push({ SKU:'',
+    Price:'',
+    name:''})
   }
 
 }
