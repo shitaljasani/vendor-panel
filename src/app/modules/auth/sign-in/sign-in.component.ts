@@ -15,6 +15,7 @@ export class AuthSignInComponent implements OnInit
 {
     signInForm: FormGroup;
     message: any;
+    isotp=false
 
     /**
      * Constructor
@@ -52,6 +53,9 @@ export class AuthSignInComponent implements OnInit
         });
     }
 
+    sendotp(){
+        this.isotp=!this.isotp
+    }
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------

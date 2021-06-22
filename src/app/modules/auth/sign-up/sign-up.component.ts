@@ -14,7 +14,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AuthSignUpComponent implements OnInit
 {
+    isLinear = true;
     signInForm: FormGroup;
+    formNameGroup: FormGroup;
+    locationgroup:FormGroup;
+    verificationform:FormGroup;
     message: any;
 
     /**
@@ -50,6 +54,22 @@ export class AuthSignUpComponent implements OnInit
              password  : ['admin'],
              rememberMe: ['']
          });
+         this.formNameGroup = this._formBuilder.group({
+            mobilenumber : ['',Validators.required],
+            ownername : ['',Validators.required],
+            shopname : ['',Validators.required],
+            email : ['',Validators.required],
+            password : ['',Validators.required],
+         });
+         this.locationgroup = this._formBuilder.group({
+            address : ['',Validators.required],
+            GSTno : ['',Validators.required],
+            location : ['',Validators.required],
+                });
+         this.verificationform = this._formBuilder.group({
+            adharfront : ['',Validators.required],
+            adharback : ['',Validators.required]
+        });
      }
  
     

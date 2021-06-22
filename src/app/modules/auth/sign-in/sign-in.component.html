@@ -16,22 +16,23 @@
                     {{message.content}}
                 </treo-message>
                
-                        <form>
+                        <form *ngIf='!isotp'>
                             <mat-form-field>
-                                <mat-label>Email</mat-label>
+                                <mat-label>Mobile number</mat-label>
                                 <input matInput placeholder="Enter Email" required>
                             </mat-form-field>
+                            
+                                <button class="add-btn mat-flat-button mat-primary ml-2" (click)='sendotp()' mat-flat-button>Submit</button>
+                            
+                        </form>
+                        <form *ngIf='isotp'>
                             <mat-form-field>
-                                <mat-label>Password</mat-label>
+                                <mat-label>OTP</mat-label>
                                 <input matInput placeholder="Enter Password" required>
                             </mat-form-field>
-                            <a class="link"
-                            [routerLink]="['/sign-up']">sign Up</a>
+                            <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button>Submit</button>
                         </form>
-                   
-
-                
-            </div>
+                   </div>
         </div>
     </treo-card>
 
