@@ -5,48 +5,25 @@
 // @ Styles from this file will override anything from 'vendors.scss' file allowing customizations and
 //  modifications of third party libraries.
 // -----------------------------------------------------------------------------------------------------
-// .center-spacing {
-//     padding: 30px;
-//     width: 100%;
-//     // background: transparent !important;
-//     .center-card {
-//         // background: #ffffff;
-//         padding: 20px;
-//     }
-// }
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
 .mat-form-field.mat-form-field-appearance-fill {
     .mat-form-field-wrapper {
         margin-bottom: 0px;
     }
 }
 
-/* comman class (center part spacing) */
-.center-spacing {
-    margin: 32px 40px 0;
-    @media (max-width: 576px) {
-      margin: 20px 16px 0;
-    }
+.content_bg {
+  background: #fff;
+  // padding: 0 20px;
 }
 
-.bg-dialog,
-.bg-card {
-  border-radius: 8px;
+.btn-primary.btn-primary:disabled, 
+.btn-primary.btn-primary.is-disabled {
+  background-color: #bbbbbb;
+  border-color: rgba(0, 0, 0, 0.05);
+    color: #FFF;
+    cursor: default;
+    pointer-events: none;
 }
-
-.center-card {
-    margin-bottom: 32px;
-    padding: 32px;
-    border-radius: 8px;
-    @media (max-width: 576px) {
-        margin: 20px 16px 0;
-        padding: 20px;
-    }
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    .nodata_msg{
-      text-align: center;
-      padding: 10px;
-      font-weight: 800;
-      color: red;
-      text-decoration: underline;
-    }
-  }

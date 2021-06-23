@@ -1,16 +1,19 @@
+
+
 .header {
     width: 100%;
-    .right_part {
-        display: flex;
-        float: right;
-        .mat-button, .mat-fab, .mat-flat-button, .mat-icon-button, .mat-mini-fab, .mat-raised-button, .mat-stroked-button {
-            height: 48px;
-            min-height: 48px;
-            max-height: 48px;
-        }
+    padding: 12px 18px;
+    display: block;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E1E3DF;
+
+    .left_part, .right_part {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
     }
-    .mat-form-field {
-        width: 200px;
+    .right_part {
+        text-align: right;
     }
 }
 .list_status_part {
@@ -22,30 +25,88 @@
         display: block;
     }
 }
-.list_part {
-    width: 80%;
-    .list_item {
-        display: inline-block;
-        vertical-align: top;
-        width: 33.33%;
-        padding: 10px;
-        img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin: auto;
-            display: block;
+.item_part {
+    .filter_row {
+        display: table;
+        width: 100%;
+        .flag-img {
+            padding-right: 12px;
+            display: table-cell;
+            .dropdown-group {
+                display: inline-block;
+                position: relative;
+                .btn.caret {
+                    padding-right: 25px;
+                    position: relative;
+                    display: inline-block;
+                    text-align: left;
+                }
+                .btn-secondary {
+                    background-color: #FFF;
+                    border-color: rgba(0, 0, 0, 0.15);
+                    color: #222;
+                }
+                .checkbox-solo {
+                    padding-left: 16px;
+                }
+                .checkbox-custom, 
+                .radio-custom {
+                    position: relative;
+                    padding-left: 22px;
+                }
+                .checkbox-solo {
+                    display: inline-block;
+                    margin-right: 0;
+                }
+                .ui-toolkit .caret:after {
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 24 24%22 aria-hidden%3D%22true%22 focusable%3D%22false%22%3E%3Cpolygon fill%3D%22%23CBCCC9%22 points%3D%2216.5 10 12 16 7.5 10 16.5 10%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+                    background-size: 100%;
+                    background-position: center;
+                    width: 24px;
+                    height: 24px;
+                    pointer-events: none;
+                    position: absolute;
+                    right: 3px;
+                    top: 50%;
+                }
+            }
         }
-        span {
+    }
+
+
+
+
+
+
+
+    .list_part {
+        width: 80%;
+        .list_item {
             display: inline-block;
-            vertical-align: middle;
-            width: 50%;
+            vertical-align: top;
+            width: 33.33%;
+            padding: 10px;
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                margin: auto;
+                display: block;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+            }
         }
     }
 }
-mat-form-field{
-    width:100%;
-}
+
 .addproduct{
     display: flex;
     justify-content: space-between;
@@ -107,4 +168,112 @@ mat-form-field{
             font-weight: 500;
         }
     }
+}
+
+.etsicon-input-append {
+    position: relative;
+    display: inline-block;
+  }
+  .etsicon-input-prepend .input-prepend-item {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 5px;
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+  }
+  .etsy-icon {
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    vertical-align: middle;
+    width: 24px;
+  }
+  .text-gray-lightest {
+    color: #757575;
+  }
+  .display-inline-block {
+    display: inline-block;
+  }
+.vertical-align-top {
+    vertical-align: top;
+}
+  .input, .textarea {
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) 0 inset;
+    transition: opacity 0.3s ease-out;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-top-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    color: #222;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    height: 38px;
+    outline: none;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+  }
+  
+  .etsicon-input-append .input-append-item {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 20;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+  .btn-transparent {
+    background-color: transparent;
+    color: #595959;
+    border-color: transparent;
+  }
+  .btn {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    height: 38px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+.btn-icon-with-text .ss-icon, 
+.btn-icon-with-text .etsy-icon {
+    margin-right: 6px;
+}
+.searchbox {
+    width: 300px;
+    padding-right: 40px;
+    padding-left: 32px;
+}
+.flag-img-right{
+    padding-left: 12px;
+    display: inline-block;
+    vertical-align: middle;
 }
