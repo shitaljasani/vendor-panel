@@ -9,7 +9,7 @@
                 </div> -->
 
                 <!-- Title -->
-                <div class="title mb-10">Sign Up </div>
+                <div class="title mb-10">Registration</div>
                 <!-- Message -->
                 <treo-message *ngIf="message" [appearance]="message.appearance" [showIcon]="message.showIcon"
                     [type]="message.type" [@shake]="message.shake">
@@ -18,26 +18,39 @@
                 <mat-horizontal-stepper [linear]="isLinear" #stepper>
                     <mat-step  [stepControl]="formNameGroup">
                         <form [formGroup]="formNameGroup">
-                            <mat-form-field>
+                            <div class='sideformView'>
                                 <mat-label>Mobile number</mat-label>
-                                <input matInput placeholder="Enter Mobile number" formControlName="mobilenumber" required>
-                            </mat-form-field>
-                            <mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter Mobile number" formControlName="mobilenumber" required>
+                                </mat-form-field>
+
+                            </div>
+                            <div class='sideformView'>
+
                                 <mat-label>Shop Owner Name</mat-label>
-                                <input matInput placeholder="Enter Shop Owner Name" formControlName="ownername" required>
-                            </mat-form-field>
-                            <mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter Shop Owner Name" formControlName="ownername" required>
+                                </mat-form-field>
+                            </div>
+                            <div class='sideformView'>
+
                                 <mat-label>Shop Name</mat-label>
-                                <input matInput placeholder="Enter Shop Name" formControlName="shopname" required>
-                            </mat-form-field>
-                            <mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter Shop Name" formControlName="shopname" required>
+                                </mat-form-field>
+                            </div>
+                            <div class='sideformView'>
                                 <mat-label>Email</mat-label>
-                                <input matInput placeholder="Enter Email" formControlName="email" required>
-                            </mat-form-field>
-                            <mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter Email" formControlName="email" required>
+                                </mat-form-field>
+                            </div>
+                            <div class='sideformView'>
                                 <mat-label>Password</mat-label>
-                                <input matInput placeholder="Enter Password" formControlName="password" required>
-                            </mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter Password" formControlName="password" required>
+                                </mat-form-field>
+                            </div>
                             <div class="flex gt-xs:flex-row flex-auto">
                                 <button class="add-btn mat-flat-button mat-primary" mat-flat-button
                                     matStepperNext>Next</button>
@@ -67,19 +80,24 @@
                            <div class='clear'></div>
                         
                         
-                        
-                            <mat-form-field>
-                                <mat-label>Address</mat-label>
-                                <input matInput placeholder="Enter Address" formControlName="address" required>
-                            </mat-form-field>
-                            <mat-form-field>
+                           <div class='sideformView'>
+                               <mat-label>Address</mat-label>
+                               <mat-form-field>
+                                   <input matInput placeholder="Enter Address" formControlName="address" required>
+                               </mat-form-field>
+                            </div>
+                            <div class='sideformView'>
                                 <mat-label>Gst Number</mat-label>
-                                <input matInput placeholder="Enter Gst Number" formControlName="GSTno" required>
-                            </mat-form-field>
-                            <mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter Gst Number" formControlName="GSTno" required>
+                                </mat-form-field>
+                            </div>
+                            <div class='sideformView'>
                                 <mat-label>Location</mat-label>
-                                <input matInput placeholder="Enter Location" formControlName="location" required>
-                            </mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter Location" formControlName="location" required>
+                                </mat-form-field>
+                            </div>
                             <div class="flex flex-row items-center">
                                 <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
                                     matStepperNext>Next</button>

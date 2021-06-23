@@ -1,5 +1,5 @@
 <div class="content-layout fullwidth-basic-normal-scroll">
-    <treo-card class="auth-card">
+    <treo-card class="auth-card" >
         <!-- Form container -->
         <div class="form-container">
             <div class="form">
@@ -16,24 +16,58 @@
                     {{message.content}}
                 </treo-message>
                
-                        <form *ngIf='!isotp'>
-                            <mat-form-field>
-                                <mat-label>Mobile number</mat-label>
-                                <input matInput placeholder="Enter Email" required>
-                            </mat-form-field>
-                            
-                                <button class="add-btn mat-flat-button mat-primary ml-2" (click)='sendotp()' mat-flat-button>Submit</button>
-                            
+                        <form>
+                            <div *ngIf='!isotp'>
+
+                                <mat-form-field>
+                                    <mat-label>Mobile number</mat-label>
+                                    <input matInput placeholder="Enter Email" required>
+                                </mat-form-field>
+                                <button class="submit-button treo-mat-button-large"
+                                mat-flat-button
+                                [color]="'primary'"
+                                (click)="sendotp()">
+                           
+                                <span >
+                                   Send OTP
+                                </span>
+                                </button> 
+                                   
+                                 <!-- Form footer -->
+                                    <div class="form-footer">
+                                        <span>Return to</span>
+                                        <a class="link"
+                                        [routerLink]="['/pages/authentication/sign-in']">sign in</a>
+                                    </div>
+                            </div>
+
+                                <div *ngIf='isotp'>
+                                    <mat-form-field>
+                                        <mat-label>OTP</mat-label>
+                                        <input matInput placeholder="Enter Password" required>
+                                    </mat-form-field>       
+                                     <div class="form-footer">
+                                        <span>Resend OTP?</span>
+                                        <a class="link"
+                                        [routerLink]="['/pages/authentication/sign-in']">sign in</a>
+                                    </div>
+                                    <button class="submit-button treo-mat-button-large"
+                                    mat-flat-button
+                                    [color]="'primary'"
+                                    (click)="sendotp()">
+                               
+                                    <span >
+                                        Submit
+                                    </span>
+                                    </button> 
+                                </div>
                         </form>
-                        <form *ngIf='isotp'>
-                            <mat-form-field>
-                                <mat-label>OTP</mat-label>
-                                <input matInput placeholder="Enter Password" required>
-                            </mat-form-field>
-                            <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button>Submit</button>
-                        </form>
-                   </div>
+                       
+                        </div>
+      
         </div>
     </treo-card>
-
+   
 </div>
+
+
