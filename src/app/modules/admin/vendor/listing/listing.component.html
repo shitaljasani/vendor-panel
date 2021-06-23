@@ -1,32 +1,62 @@
-<div class="center-spacing">
-    <div class="center-card bg-dialog">
-        <div class="header">
-            <mat-form-field>
-                <mat-select [placeholder]="'Filter'">
-                    <mat-option [value]="'category'">fsdf</mat-option>
-                    <mat-option [value]="'category'">fsdf</mat-option>
-                    <mat-option [value]="'category'">fsdf</mat-option>
-                    <mat-option [value]="'category'">fsdf</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <div class="right_part">
-                <form class="flex">
-                    <mat-form-field class="gt-xs:pr-3">
-                        <input matInput [(ngModel)]="search" [ngModelOptions]="{standalone: true}" [placeholder]="'Search'">
-                        <a *ngIf="search.length != 0">
-                            <mat-icon class="search-icon" matSuffix [svgIcon]="'heroicons_solid:close-icon'"></mat-icon>
-                        </a>
-                    </mat-form-field>
-                </form>
-                <button class="mat-flat-button mat-primary ml-2" mat-flat-button (click)='openDialog()'>Add Listing</button>
-                <!-- <div class="clear"></div> -->
+<div class="content_bg">
+    <div class="header">
+        <!-- <mat-form-field>
+            <mat-select [placeholder]="'Filter'">
+                <mat-option [value]="'category'">fsdf</mat-option>
+                <mat-option [value]="'category'">fsdf</mat-option>
+                <mat-option [value]="'category'">fsdf</mat-option>
+                <mat-option [value]="'category'">fsdf</mat-option>
+            </mat-select>
+        </mat-form-field> -->
+        <div class="left_part">
+            <h3 class="page_heding">Listings</h3>
+        </div>
+        <div class="right_part">
+            <div class="etsicon-input-prepend etsicon-input-append">
+                <span class="etsy-icon input-prepend-item text-gray-lightest">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path>
+                        <path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path></svg>
+                    </span>
+            
+                <input type="text" class="searchbox input display-inline-block" placeholder="Search by title, tag, or SKU">
+            
+                <button class="input-append-item btn btn-transparent" type="button" data-delete="">
+                    <span class="etsy-icon text-gray">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M13.414,12l6.293-6.293a1,1,0,0,0-1.414-1.414L12,10.586,5.707,4.293A1,1,0,0,0,4.293,5.707L10.586,12,4.293,18.293a1,1,0,1,0,1.414,1.414L12,13.414l6.293,6.293a1,1,0,0,0,1.414-1.414Z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="flag-img flag-img-right">
+                <a class="btn btn-primary btn-icon-with-text is-disabled" aria-label="Add a listing" data-create="">
+                    <span class="etsy-icon icon-b-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M20,11H13V4a1,1,0,0,0-2,0v7H4a1,1,0,0,0,0,2h7v7a1,1,0,0,0,2,0V13h7A1,1,0,0,0,20,11Z"></path>
+                        </svg>
+                    </span>
+                    <span class="hide-xs hide-sm">Add a listing</span>
+                </a>
             </div>
         </div>
     </div>
-<!-- </div>
 
-<div class="center-spacing bg-dialog bg-card"> -->
-    <div class="center-card bg-dialog">
+    <div class="item_part">
+        <div class="filter_row">
+            <div class="flag-img vertical-align-top">
+                <div class="dropdown-group">
+                    <div class="caret btn selector btn-secondary btn-disabled">
+                        <label title="Select all listings on this page" class="checkbox-custom checkbox-solo">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkbox-label"></span>
+                        </label>
+                        <span style="margin-left: .55em;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="flex">
             <div class="list_part">
                 <div class="list_item">

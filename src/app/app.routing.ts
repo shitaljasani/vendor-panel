@@ -8,11 +8,11 @@ import { InitialDataResolver } from 'app/app.resolvers';
 // tslint:disable:max-line-length
 export const appRoutes: Route[] = [
 
-    // Redirect empty path to '/dashboards/finance'
-    {path: '', pathMatch : 'full', redirectTo: 'dashboards/finance'},
+    // Redirect empty path to '/listing'
+    {path: '', pathMatch : 'full', redirectTo: 'listing'},
 
-    // Redirect signed in user to the '/dashboards/finance'
-    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'dashboards/finance'},
+    // Redirect signed in user to the '/listing'
+    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'listing'},
 
     // Auth routes (guest)
     {
