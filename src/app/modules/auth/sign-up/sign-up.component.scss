@@ -5,9 +5,9 @@ auth-sign-up {
     .content-layout {
         align-items: center;
         justify-content: center;
-
+        background-color: #fff;
         treo-card {
-
+            box-shadow: unset!important;
             .form-container {
 
                 .form {
@@ -19,17 +19,18 @@ auth-sign-up {
                     display: inline-block;
                     margin-right: 100px;
                     .matlbl{
-                        color: #27303f;
-                        font-weight: 500;
+                        color: #222;
+                        font-weight: 600;
     
                     }
                     .fileinput{
-                        border: 1px solid #e2e8f0;
+                        border: 1px solid #cfd8e3;
                         height: 100px;
                         width: 100%;
-                        border-radius: 6px;
+                        border-radius: 3px;
                         margin: 5px 0 16px 0;
                         position: relative;
+                        background-color: #F0FBFD;
                         .filedata{
                             height: 100px;
                             opacity: 0;
@@ -63,7 +64,16 @@ auth-sign-up {
     }
 }
 
+.treo-theme-light .mat-step-header .mat-step-icon {
+    background-color: #CBCCC9!important;
+    color: #f0f5ff;
+}
 
+.treo-theme-light .mat-step-header .mat-step-icon-selected, .treo-theme-light .mat-step-header .mat-step-icon-state-done, .treo-theme-light .mat-step-header .mat-step-icon-state-edit
+
+{
+    background-color: #595959!important;
+}
 // -----------------------------------------------------------------------------------------------------
 // @ Theming
 // -----------------------------------------------------------------------------------------------------

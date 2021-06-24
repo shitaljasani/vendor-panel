@@ -14,11 +14,47 @@ h1, h2, h3, h4, h5, p {
     }
 }
 
+.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 48px;
+  border-radius: 3px;
+  padding: 0 16px;
+  border-width: 1px;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+  border-color: rgba(0, 0, 0, 0.15);
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+.sideformView{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+    mat-label{
+      width: 40%;
+      color: #222222;
+      font-weight: 600;
+    }
+    mat-form-field{
+      margin: 0 10px;
+    }
+  }
+
+.treo-theme-light .mat-form-field.mat-form-field-appearance-fill .mat-form-field-label{
+  color: #222!important;
+}
+/* comman class (center part spacing) */
+.center-spacing {
+    margin: 32px 40px 0;
+    @media (max-width: 576px) {
+      margin: 20px 16px 0;
+    }
 .content_bg {
   background: #fff;
   // padding: 0 20px;
 }
-
+}
 .btn-primary.btn-primary:disabled, 
 .btn-primary.btn-primary.is-disabled {
   background-color: #bbbbbb;
@@ -27,3 +63,37 @@ h1, h2, h3, h4, h5, p {
     cursor: default;
     pointer-events: none;
 }
+
+.center-card {
+    margin-bottom: 32px;
+    padding: 32px;
+    border-radius: 8px;
+    @media (max-width: 576px) {
+        margin: 20px 16px 0;
+        padding: 20px;
+    }
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    .nodata_msg{
+      text-align: center;
+      padding: 10px;
+      font-weight: 800;
+      color: red;
+      text-decoration: underline;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .sideformView{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+        mat-label{
+          width: 100%;
+        }
+        mat-form-field{
+          width: 100%;
+         
+        }
+      }
+  }
