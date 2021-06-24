@@ -1036,13 +1036,20 @@ export const defaultNavigation: TreoNavigationItem[] = [
     }
 ];
 export const compactNavigation: TreoNavigationItem[] = [
-    // {
-    //     id   : 'dashboard',
-    //     title: 'Dashboard',
-    //     type : 'basic',
-    //     icon : 'heroicons_outline:home',
-    //     link : '/dashboards'
-    // },
+    {
+        id   : 'search',
+        title: 'Search',
+        type : 'basic',
+        icon : 'heroicons_solid:search',
+        link : '/search'
+    },
+    {
+        id   : 'dashboard',
+        title: 'Dashboard',
+        type : 'basic',
+        icon : 'heroicons_outline:home',
+        link : '/dashboards'
+    },
     {
         id   : 'listing',
         title: 'Listing',
@@ -1050,41 +1057,62 @@ export const compactNavigation: TreoNavigationItem[] = [
         icon : 'dripicons:view-list',
         link : '/listing'
     },
-    // {
-    //     id      : 'dashboards',
-    //     title   : 'Dashboards',
-    //     type    : 'aside',
-    //     icon    : 'heroicons_outline:home',
-    //     children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
-    // },
-    // {
-    //     id      : 'applications',
-    //     title   : 'Apps',
-    //     type    : 'aside',
-    //     icon    : 'heroicons_outline:qrcode',
-    //     children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
-    // },
-    // {
-    //     id      : 'pages',
-    //     title   : 'Pages',
-    //     type    : 'aside',
-    //     icon    : 'heroicons_outline:document-duplicate',
-    //     children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
-    // },
-    // {
-    //     id      : 'user-interface',
-    //     title   : 'UI',
-    //     type    : 'aside',
-    //     icon    : 'heroicons_outline:collection',
-    //     children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
-    // },
-    // {
-    //     id      : 'navigation-features',
-    //     title   : 'Navigation',
-    //     type    : 'aside',
-    //     icon    : 'heroicons_outline:menu',
-    //     children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
-    // }
+    {
+        id   : 'messages',
+        title: 'Messages',
+        type : 'basic',
+        icon : 'dripicons:message',
+        link : '/messages'
+    },
+    {
+        id   : 'orders-delivery',
+        title: 'Orders & Delivery',
+        type : 'basic',
+        icon : 'iconsmind:notepad',
+        link : '/orders-delivery'
+    },
+    {
+        id   : 'stats',
+        title: 'Stats',
+        type : 'basic',
+        icon : 'heroicons_solid:chart-bar',
+        link : '/stats'
+    },
+    {
+        id   : 'finances',
+        title: 'Finances',
+        type : 'basic',
+        icon : 'iconsmind:bank',
+        link : '/finances'
+    },
+    {
+        id   : 'marketing',
+        title: 'Marketing',
+        type : 'basic',
+        icon : 'iconsmind:loudspeaker',
+        link : '/marketing'
+    },
+    {
+        id   : 'integrations',
+        title: 'Integrations',
+        type : 'basic',
+        icon : 'dripicons:view-thumb',
+        link : '/integrations'
+    },
+    {
+        id   : 'community-help',
+        title: 'Community & Help',
+        type : 'basic',
+        icon : 'heroicons_solid:users',
+        link : '/community-help'
+    },
+    {
+        id   : 'settings',
+        title: 'Settings',
+        type : 'basic',
+        icon : 'settings',
+        link : '/settings'
+    }
 ];
 export const futuristicNavigation: TreoNavigationItem[] = [
     {

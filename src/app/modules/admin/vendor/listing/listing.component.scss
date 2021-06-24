@@ -17,7 +17,6 @@
     }
 }
 .list_status_part {
-    width: 20%;
     h5 {
         margin-top: 5px;
     }
@@ -77,7 +76,23 @@
             }
         }
     }
-
+    .main_item_part{
+        display: block;
+        width: 100%;
+        padding: 12px 18px;
+        .item_left_part{
+            display: inline-block;
+            width: 75%;
+            vertical-align: top;
+            padding: 0 18px;
+        }
+        .item_right_part{
+            display: inline-block;
+            width: 25%;
+            vertical-align: top;
+            padding: 0 18px;
+        }
+    }
 
 
 
@@ -85,7 +100,6 @@
 
 
     .list_part {
-        width: 80%;
         .list_item {
             display: inline-block;
             vertical-align: top;
@@ -111,6 +125,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .upload-wrapper{
     display: inline-block;
     margin-right: 100px;
@@ -139,9 +154,7 @@
         }
     }
 }
-.closebtn{
-    
-}
+
 .upload-wrapper1{
     display: inline-block;
     .matlbl{
@@ -173,8 +186,9 @@
 .etsicon-input-append {
     position: relative;
     display: inline-block;
-  }
-  .etsicon-input-prepend .input-prepend-item {
+}
+
+.etsicon-input-prepend .input-prepend-item {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -183,24 +197,41 @@
     position: absolute;
     top: 50%;
     z-index: 20;
-  }
-  .etsy-icon {
+}
+
+.etsy-icon {
     display: inline-block;
     fill: currentColor;
     height: 24px;
     vertical-align: middle;
     width: 24px;
-  }
-  .text-gray-lightest {
+}
+
+.gray-color {
     color: #757575;
-  }
-  .display-inline-block {
+}
+
+.display-inline-block {
     display: inline-block;
-  }
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
 .vertical-align-top {
     vertical-align: top;
 }
-  .input, .textarea {
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.input, .textarea {
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) 0 inset;
     transition: opacity 0.3s ease-out;
@@ -223,9 +254,9 @@
     padding-left: 12px;
     padding-right: 12px;
     width: 100%;
-  }
+}
   
-  .etsicon-input-append .input-append-item {
+.etsicon-input-append .input-append-item {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -234,18 +265,15 @@
     top: 50%;
     right: 0;
     z-index: 20;
-  }
+}
   
-  .display-none {
-    display: none;
-  }
-  
-  .btn-transparent {
+.btn-transparent {
     background-color: transparent;
     color: #595959;
     border-color: transparent;
-  }
-  .btn {
+}
+
+.btn {
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
@@ -263,15 +291,18 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
 }
+
 .btn-icon-with-text .ss-icon, 
 .btn-icon-with-text .etsy-icon {
     margin-right: 6px;
 }
+
 .searchbox {
     width: 300px;
     padding-right: 40px;
     padding-left: 32px;
 }
+
 .flag-img-right{
     padding-left: 12px;
     display: inline-block;
