@@ -8,11 +8,11 @@ import { InitialDataResolver } from 'app/app.resolvers';
 // tslint:disable:max-line-length
 export const appRoutes: Route[] = [
 
-    // Redirect empty path to '/listing'
-    {path: '', pathMatch : 'full', redirectTo: 'listing'},
+    // Redirect empty path to '/dashboard'
+    {path: '', pathMatch : 'full', redirectTo: 'dashboard'},
 
-    // Redirect signed in user to the '/listing'
-    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'listing'},
+    // Redirect signed in user to the '/dashboard'
+    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'dashboard'},
 
     // Auth routes (guest)
     {
@@ -72,6 +72,7 @@ export const appRoutes: Route[] = [
         },
         children   : [
             {path: 'listing', loadChildren: () => import('app/modules/admin/vendor/listing/listing.module').then(m => m.ListingModule)},
+            {path: 'dashboard', loadChildren: () => import('app/modules/admin/vendor/dashboard/dashboard.module').then(m => m.DashboardModule)},
             // Dashboards
             {path: 'dashboards', children: [
                 {path: 'finance', loadChildren: () => import('app/modules/admin/dashboards/finance/finance.module').then(m => m.FinanceModule)},

@@ -1,13 +1,5 @@
 <div class="content_bg">
     <div class="header">
-        <!-- <mat-form-field>
-            <mat-select [placeholder]="'Filter'">
-                <mat-option [value]="'category'">fsdf</mat-option>
-                <mat-option [value]="'category'">fsdf</mat-option>
-                <mat-option [value]="'category'">fsdf</mat-option>
-                <mat-option [value]="'category'">fsdf</mat-option>
-            </mat-select>
-        </mat-form-field> -->
         <div class="left_part">
             <h3 class="page_heding">Listings</h3>
         </div>
@@ -16,8 +8,9 @@
                 <span class="etsy-icon input-prepend-item text-gray-lightest">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                         <path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path>
-                        <path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path></svg>
-                    </span>
+                        <path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path>
+                    </svg>
+                </span>
             
                 <input type="text" class="searchbox input display-inline-block" placeholder="Search by title, tag, or SKU">
             
@@ -44,48 +37,54 @@
     </div>
 
     <div class="item_part">
-        <div class="filter_row">
-            <div class="flag-img vertical-align-top">
-                <div class="dropdown-group">
-                    <div class="caret btn selector btn-secondary btn-disabled">
-                        <label title="Select all listings on this page" class="checkbox-custom checkbox-solo">
-                            <input type="checkbox" class="checkbox">
-                            <span class="checkbox-label"></span>
-                        </label>
-                        <span style="margin-left: .55em;"></span>
+        <div class="main_item_part">
+            <div class="item_left_part">
+                <div class="flax">
+                    <div class="filter_row">
+                        <div class="flag-img vertical-align-top">
+                            <div class="dropdown-group">
+                                <div class="caret btn selector btn-secondary btn-disabled">
+                                    <label title="Select all listings on this page" class="checkbox-custom checkbox-solo">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="checkbox-label"></span>
+                                    </label>
+                                    <span style="margin-left: .55em;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_part">
+                        <div class="list_item">
+                            <img src="assets/images/cards/11-512x512.jpg"/>
+                            <span>SKU</span>
+                            <span>Price</span>
+                        </div>
+                        <div class="list_item">
+                            <img src="assets/images/cards/01-320x200.jpg"/>
+                            <span>SKU</span>
+                            <span>Price</span>
+                        </div>
+                        <div class="list_item">
+                            <img src="assets/images/cards/11-512x512.jpg"/>
+                            <span>SKU</span>
+                            <span>Price</span>
+                        </div>
+                        <div class="list_item">
+                            <img src="assets/images/cards/11-512x512.jpg"/>
+                            <span>SKU</span>
+                            <span>Price</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex">
-            <div class="list_part">
-                <div class="list_item">
-                    <img src="assets/images/cards/11-512x512.jpg"/>
-                    <span>SKU</span>
-                    <span>Price</span>
+            <div class="item_right_part">
+                <div class="list_status_part">
+                    <h5>Listing Status</h5>
+                    <a class="link">Active</a>
+                    <a class="link">Out of stock</a>
+                    <a class="link">Temporary stock out</a>
+                    <a class="link">Inactive</a>
                 </div>
-                <div class="list_item">
-                    <img src="assets/images/cards/01-320x200.jpg"/>
-                    <span>SKU</span>
-                    <span>Price</span>
-                </div>
-                <div class="list_item">
-                    <img src="assets/images/cards/11-512x512.jpg"/>
-                    <span>SKU</span>
-                    <span>Price</span>
-                </div>
-                <div class="list_item">
-                    <img src="assets/images/cards/11-512x512.jpg"/>
-                    <span>SKU</span>
-                    <span>Price</span>
-                </div>
-            </div>
-            <div class="list_status_part">
-                <h5>Listing Status</h5>
-                <a class="link">Active</a>
-                <a class="link">Out of stock</a>
-                <a class="link">Temporary stock out</a>
-                <a class="link">Inactive</a>
             </div>
         </div>
     </div>
