@@ -1,0 +1,25 @@
+.content_bg{
+    width:100%;
+    .addlist-container{
+        width:100%;
+        padding:20px 30px;
+        .sidecolumn{
+            display:flex;
+             @media (max-width: 630px) {
+                  flex-wrap:wrap
+            }
+            mat-form-field{
+                       @media (max-width: 630px) {
+                            margin:0
+                        }
+            }
+        }
+    }
+}
+.sideformView{
+     mat-form-field{
+                       @media (max-width: 630px) {
+                            margin:0
+                        }
+            }
+}

@@ -18,43 +18,7 @@ export class ListingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(AddProduct, {
-      width: '530px',
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    
-    });
-  }
+  
 
 }
 
-
-@Component({
-  selector: 'AddListing',
-  templateUrl: 'addListing.html',
-  styleUrls: ['./listing.component.scss']
-})
-export class AddProduct {
-
-  constructor(
-    public dialogRef: MatDialogRef<AddProduct>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-    productdata=[{
-      SKU:'',
-      Price:'',
-      name:''
-    }]
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-  add(){
-    this.productdata.push({ SKU:'',
-    Price:'',
-    name:''})
-  }
-
-}

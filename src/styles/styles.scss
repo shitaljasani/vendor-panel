@@ -32,12 +32,14 @@ h1, h2, h3, h4, h5, p {
   align-items: center;
   margin: 20px 0px;
     mat-label{
-      width: 40%;
+     max-width: 100px;
+     width: -webkit-fill-available;
       color: #222222;
       font-weight: 600;
     }
     mat-form-field{
       margin: 0 10px;
+      width:100%
     }
   }
 
