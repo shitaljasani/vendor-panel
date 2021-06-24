@@ -8,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class AddListingComponent implements OnInit {
 
   constructor() { }
-
+  addProduct=[{
+    sku:"",
+    Price:"",
+    varition:""
+  }]
   ngOnInit(): void {
   }
 
+addata(){
+  this.addProduct.push({
+    sku:"",
+    Price:"",
+    varition:""
+  })
+}
 }

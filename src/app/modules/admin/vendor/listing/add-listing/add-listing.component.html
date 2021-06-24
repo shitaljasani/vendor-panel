@@ -1,4 +1,7 @@
 <div class="content_bg">
+<div class="header">
+    <h2>Add Listing</h2>
+</div>
     <div class="addlist-container">
         <form>
             <div class='sidecolumn'>
@@ -45,7 +48,7 @@
                 
             </div>
                 <mat-label>Varition Wise</mat-label>
-                <div class='sidecolumn'>
+                <div class='sidecolumn' *ngFor="let product of addProduct">
                         <div class='sideformView'>
                             <mat-label>Sku</mat-label>
                             <mat-form-field>
@@ -65,11 +68,13 @@
                             </mat-form-field>
                         </div>
                         <div>
-                            <mat-icon svgIcon="heroicons_outline:plus-circle" ></mat-icon>
+                            <mat-icon svgIcon="heroicons_outline:plus-circle" (click)="addata()"></mat-icon>
                             <mat-icon svgIcon="heroicons_outline:x-circle"></mat-icon>
                         </div>
 
                 </div>
+                <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
+                                (click)="signIn()">Submit</button>
         </form>
     </div>
 </div>
