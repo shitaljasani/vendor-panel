@@ -17,14 +17,14 @@ import { MatDividerModule } from '@angular/material/divider';
 import { ListingComponent } from 'app/modules/admin/vendor/listing/listing.component';
 import { ListingRoutes } from 'app/modules/admin/vendor/listing/listing.routing';
 import { AddListingComponent } from './add-listing/add-listing.component';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
     declarations: [
         ListingComponent,
         AddListingComponent
     ],
-    imports     : [
+    imports: [
         RouterModule.forChild(ListingRoutes),
         MatButtonModule,
         MatDividerModule,
@@ -43,7 +43,8 @@ import { AddListingComponent } from './add-listing/add-listing.component';
         MatDialogModule,
         MatTabsModule,
         MatDividerModule,
-        SharedModule
+        SharedModule,
+        MatSlideToggleModule
     ]
 })
 export class ListingModule

@@ -78,13 +78,38 @@
                 </div> -->
             </div>
             <div class="item_right_part">
-                <!-- <div class="list_status_part">
-                    <h5>Listing Status</h5>
-                    <a class="link">Active</a>
-                    <a class="link">Out of stock</a>
-                    <a class="link">Temporary stock out</a>
-                    <a class="link">Inactive</a>
-                </div> -->
+                <div class="flag-img Quickcall-img" [routerLink]="['/listing/add']">
+                    <a class="btn btn-primary btn-icon-with-text"  aria-label="Add a listing" data-create="">
+                        <span class="hide-xs hide-sm">Quick edit</span>
+                    </a>
+                </div>
+                <div class='status_slider'>
+                    <mat-slide-toggle>Status</mat-slide-toggle>
+                </div>
+                <div class="list_status_part">
+                    <h6>Listing Status</h6>
+                    
+                    <input type="radio" id="age1" name="age" value="30">
+                    <label for="age1">Active</label><br>
+                    <input type="radio" id="age2" name="age" value="60">
+                    <label for="age2">Out of stock</label><br>  
+                    <input type="radio" id="age3" name="age" value="100">
+                    <label for="age3">Temporary stock out</label><br>   
+                    <input type="radio" id="age4" name="age" value="100">
+                    <label for="age4">Inactive</label>   
+                    
+                </div>
+                <div class="list_status_part">
+                    <h6>Listing Video</h6>
+                    
+                    <input type="radio" id="age1" name="age" value="30">
+                    <label for="age1">All</label><br>
+                    <input type="radio" id="age2" name="age" value="60">
+                    <label for="age2">With video</label><br>  
+                    <input type="radio" id="age3" name="age" value="100">
+                    <label for="age3">Without video</label><br>   
+                   
+                </div>
             </div>
         </div>
     </div>
