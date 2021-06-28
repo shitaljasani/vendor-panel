@@ -180,7 +180,6 @@ export const appRoutes: Route[] = [
                     {path: 'right-sidebar', children: [
 
                         {path: 'fullheight', children: [
-                            {path: 'basic', loadChildren: () => import('app/modules/admin/ui/content-layouts/right-sidebar/fullheight/basic/basic.module').then(m => m.RightSidebarFullheightBasicModule)},
                             {path: 'standard', loadChildren: () => import('app/modules/admin/ui/content-layouts/right-sidebar/fullheight/standard/standard.module').then(m => m.RightSidebarFullheightStandardModule)},
                             {path: 'tabs', loadChildren: () => import('app/modules/admin/ui/content-layouts/right-sidebar/fullheight/tabs/tabs.module').then(m => m.RightSidebarFullheightTabsModule)},
                             {path: 'tabs-navigation', loadChildren: () => import('app/modules/admin/ui/content-layouts/right-sidebar/fullheight/tabs-navigation/tabs-navigation.module').then(m => m.RightSidebarFullheightTabsNavigationModule)}

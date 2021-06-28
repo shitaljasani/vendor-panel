@@ -6,16 +6,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TreoDrawerModule } from '@treo/components/drawer';
 import { LayoutComponent } from 'app/layout/layout.component';
-import { EmptyLayoutModule } from 'app/layout/layouts/empty/empty.module';
-import { BasicLayoutModule } from 'app/layout/layouts/vertical/basic/basic.module';
 import { ThinLayoutModule } from 'app/layout/layouts/vertical/thin/thin.module';
 import { SharedModule } from 'app/shared/shared.module';
 
 const modules = [
-    // Empty
-    EmptyLayoutModule,
     // Vertical navigation
-    BasicLayoutModule,
     ThinLayoutModule
 ];
 
