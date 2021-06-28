@@ -7,7 +7,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { TreoDrawerModule } from '@treo/components/drawer';
 import { LayoutComponent } from 'app/layout/layout.component';
 import { EmptyLayoutModule } from 'app/layout/layouts/empty/empty.module';
-import { CenteredLayoutModule } from 'app/layout/layouts/horizontal/centered/centered.module';
 import { BasicLayoutModule } from 'app/layout/layouts/vertical/basic/basic.module';
 import { ThinLayoutModule } from 'app/layout/layouts/vertical/thin/thin.module';
 import { SharedModule } from 'app/shared/shared.module';
@@ -15,10 +14,6 @@ import { SharedModule } from 'app/shared/shared.module';
 const modules = [
     // Empty
     EmptyLayoutModule,
-
-    // Horizontal navigation
-    CenteredLayoutModule,
-
     // Vertical navigation
     BasicLayoutModule,
     ThinLayoutModule
