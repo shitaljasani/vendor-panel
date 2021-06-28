@@ -10,36 +10,12 @@
 <!-- Centered -->
 <centered-layout *ngIf="layout === 'centered'"></centered-layout>
 
-<!-- Enterprise -->
-<enterprise-layout *ngIf="layout === 'enterprise'"></enterprise-layout>
-
-<!-- Material -->
-<material-layout *ngIf="layout === 'material'"></material-layout>
-
-<!-- Modern -->
-<modern-layout *ngIf="layout === 'modern'"></modern-layout>
-
 <!-- ----------------------------------------------------------------------------------------------------- -->
 <!-- Layouts with vertical navigation -->
 <!-- ----------------------------------------------------------------------------------------------------- -->
 
 <!-- Basic -->
 <basic-layout *ngIf="layout === 'basic'"></basic-layout>
-
-<!-- Classic -->
-<classic-layout *ngIf="layout === 'classic'"></classic-layout>
-
-<!-- Classy -->
-<classy-layout *ngIf="layout === 'classy'"></classy-layout>
-
-<!-- Compact -->
-<compact-layout *ngIf="layout === 'compact'"></compact-layout>
-
-<!-- Dense -->
-<dense-layout *ngIf="layout === 'dense'"></dense-layout>
-
-<!-- Futuristic -->
-<futuristic-layout *ngIf="layout === 'futuristic'"></futuristic-layout>
 
 <!-- Thin -->
 <thin-layout *ngIf="layout === 'thin'"></thin-layout>
@@ -96,7 +72,7 @@
             <div class="mb-4 text-sm font-medium text-secondary tracking-widest">LAYOUT</div>
             <div class="flex flex-wrap">
                 <div class="flex flex-col items-center mb-6 cursor-pointer"
-                     *ngFor="let layoutType of ['empty', 'basic', 'classic', 'classy', 'compact', 'dense', 'futuristic', 'thin', 'centered', 'enterprise', 'material', 'modern']"
+                     *ngFor="let layoutType of ['empty', 'basic', 'thin', 'material']"
                      (click)="setLayout(layoutType)">
                     <img class="w-full p-1 border-4 rounded-sm text-primary light:border-cool-gray-300 dark:border-cool-gray-900 light:bg-card dark:bg-cool-gray-600"
                          [ngClass]="{'border-primary shadow-solid': config.layout === layoutType}"
