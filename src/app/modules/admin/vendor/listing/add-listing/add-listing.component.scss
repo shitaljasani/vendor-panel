@@ -17,6 +17,21 @@
         }
     }
 }
+mat-label{
+      color: #222222;
+      font-weight: 600;
+}
+.variationbox{
+    border: 1px solid #e2e8f0;
+    padding: 35px 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 16px 0;
+}
+.add-btn{
+    padding: 0 10px;
+}
 .sideformView{
      mat-form-field{
                        @media (max-width: 630px) {

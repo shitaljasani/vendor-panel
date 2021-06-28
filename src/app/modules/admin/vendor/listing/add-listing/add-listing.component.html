@@ -4,74 +4,72 @@
 </div>
     <div class="addlist-container">
         <form>
-            <div class='sidecolumn'>
+            
                 <div class='sideformView'>
                     <mat-label>Title</mat-label>
                         <mat-form-field>
-                        <input matInput placeholder="Enter Title" formControlName="shopname" required/>
+                        <input matInput placeholder="Enter Title"  required/>
                         </mat-form-field>
                 </div>
            
                 <div class='sideformView'>
                     <mat-label>Category</mat-label>
                         <mat-form-field>
-                        <input matInput placeholder="Enter Category" formControlName="shopname" required/>
+                        <input matInput placeholder="Enter Category"  required/>
                         </mat-form-field>
                 </div>
-            </div>
              <div class='sideformView'>
                     <mat-label>Description</mat-label>
                         <mat-form-field>
-                        <input matInput placeholder="Enter Description" formControlName="shopname" required/>
+                        <input matInput placeholder="Enter Description"  required/>
                         </mat-form-field>
             </div>
              <div class='sideformView'>
                     <mat-label>Price</mat-label>
                         <mat-form-field>
-                        <input matInput placeholder="Enter Price" formControlName="shopname" required/>
+                        <input matInput placeholder="Enter Price"  required/>
                         </mat-form-field>
             </div>
-            <div class='sidecolumn'>
                 <div class='sideformView'>
                     <mat-label>Simple</mat-label>
                         <mat-form-field>
-                        <input matInput placeholder="Enter Simple" formControlName="shopname" required/>
+                        <input matInput placeholder="Enter Simple"  required/>
                         </mat-form-field>
                 </div>
            
                 <div class='sideformView'>
                     <mat-label>Varition</mat-label>
                         <mat-form-field>
-                        <input matInput placeholder="Enter Varition" formControlName="shopname" required/>
+                        <input matInput placeholder="Enter Varition"  required/>
                         </mat-form-field>
                 </div>
                 
-            </div>
+           
                 <mat-label>Varition Wise</mat-label>
-                <div class='sidecolumn' *ngFor="let product of addProduct">
-                        <div class='sideformView'>
+                <div class='variationbox' >
+                        <div class=''>
                             <mat-label>Sku</mat-label>
                             <mat-form-field>
-                            <input matInput placeholder="Enter Sku" formControlName="shopname" required/>
+                            <input matInput placeholder="Enter Sku"  required/>
                             </mat-form-field>
                         </div>
-                        <div class='sideformView'>
+                        <div class=''>
                             <mat-label>Price</mat-label>
                             <mat-form-field>
-                            <input matInput placeholder="Enter Price" formControlName="shopname" required/>
+                            <input matInput placeholder="Enter Price"  required/>
                             </mat-form-field>
                         </div>
-                        <div class='sideformView'>
+                        <div class=''>
                             <mat-label>Varitin name(color,size)</mat-label>
                             <mat-form-field>
-                            <input matInput placeholder="Enter Varitin name" formControlName="shopname" required/>
+                            <input matInput placeholder="Enter Varitin name"  required/>
                             </mat-form-field>
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">close</mat-icon>
                         </div>
-                        <div>
+                        <!-- <div>
                             <mat-icon svgIcon="heroicons_outline:plus-circle" (click)="addata()"></mat-icon>
                             <mat-icon svgIcon="heroicons_outline:x-circle"></mat-icon>
-                        </div>
-
+                        </div> -->
                 </div>
                 <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
                                >Submit</button>
