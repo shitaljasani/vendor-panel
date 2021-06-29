@@ -9,7 +9,12 @@
                 </div> -->
 
                 <!-- Title -->
-                <div class="title mb-10">Registration</div>
+                <div class="title">Registration</div>
+                <div class="subtitle mb-10">
+                    <span>Already have an account?</span>
+                    <a class="link"
+                       [routerLink]="['/sign-in']">Sign in</a>
+                </div>
                 <!-- Message -->
                 <treo-message *ngIf="message" [appearance]="message.appearance" [showIcon]="message.showIcon"
                     [type]="message.type" [@shake]="message.shake">
