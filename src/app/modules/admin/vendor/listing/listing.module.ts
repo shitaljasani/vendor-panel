@@ -18,7 +18,7 @@ import { ListingComponent } from 'app/modules/admin/vendor/listing/listing.compo
 import { ListingRoutes } from 'app/modules/admin/vendor/listing/listing.routing';
 import { AddListingComponent } from './add-listing/add-listing.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
+import { DragDropModule } from '@angular/cdk/drag-drop';
 @NgModule({
     declarations: [
         ListingComponent,
@@ -44,7 +44,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
         MatTabsModule,
         MatDividerModule,
         SharedModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        DragDropModule,
     ]
 })
 export class ListingModule

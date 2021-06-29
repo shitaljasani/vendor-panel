@@ -30,7 +30,7 @@
                         <input matInput placeholder="Enter Price"  required/>
                         </mat-form-field>
             </div>
-                <div class='sideformView'>
+                <!-- <div class='sideformView'>
                     <mat-label>Simple</mat-label>
                         <mat-form-field>
                         <input matInput placeholder="Enter Simple"  required/>
@@ -42,10 +42,10 @@
                         <mat-form-field>
                         <input matInput placeholder="Enter Varition"  required/>
                         </mat-form-field>
-                </div>
+                </div> -->
                 
            
-                <mat-label>Varition Wise</mat-label>
+                <!-- <mat-label>Varition Wise</mat-label>
                 <div class='variationbox' >
                         <div class=''>
                             <mat-label>Sku</mat-label>
@@ -66,13 +66,57 @@
                             </mat-form-field>
                             <mat-icon aria-hidden="false" aria-label="Example home icon">close</mat-icon>
                         </div>
-                        <!-- <div>
-                            <mat-icon svgIcon="heroicons_outline:plus-circle" (click)="addata()"></mat-icon>
-                            <mat-icon svgIcon="heroicons_outline:x-circle"></mat-icon>
-                        </div> -->
-                </div>
-                <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
-                               >Submit</button>
-        </form>
+                     
+                        
+                    </div> -->
+                    <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
+                    >Submit</button>
+
+                    <!-- <div cdkDropList   class="example-list" [cdkDropListData]=movies  (cdkDropListDropped)="drop($event)">
+                        <div class="example-box" *ngFor="let movie of movies" [cdkDragData]=movie cdkDrag>{{movie}}</div>
+                    </div> -->
+
+                    <!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+
+                        <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+                          <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                          {{movie}}
+                        </div>
+                        
+                      </div> -->
+                      <div class="height"></div><br>
+                      <div id = "imageListId">
+                        <div id="imageNo1" class = "listitemClass">
+                            <img src="assets/images/avatars/female-01.jpg" alt="">
+                        </div>
+                          
+                        <div id="imageNo2" class = "listitemClass">
+                            <img src="assets/images/avatars/female-01.jpg" alt="">
+                        </div>
+                  
+                        <div id="imageNo3" class = "listitemClass">
+                            <img src="assets/images/avatars/female-02.jpg" alt="">
+                        </div>
+                  
+                        <div id="imageNo4" class = "listitemClass">
+                            <img src="assets/images/avatars/female-03.jpg" alt="">
+                        </div>
+                  
+                        <div id="imageNo5" class = "listitemClass">
+                            <img src="assets/images/avatars/female-04.jpg" alt="">
+                        </div>
+                  
+                        <div id="imageNo6" class = "listitemClass">
+                            <img src="assets/images/avatars/female-05.jpg" alt="">
+                        </div>
+                    </div>
+                          
+                    <div id="outputDiv">
+                        <b>Output of ID's of images : </b>
+                        <input id="outputvalues" type="text" value="" />
+                    </div>
+
+                      
+                </form>
     </div>
 </div>

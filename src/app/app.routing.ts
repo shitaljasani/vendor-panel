@@ -64,8 +64,8 @@ export const appRoutes: Route[] = [
     // Admin routes
     {
         path       : '',
-        canActivate: [AuthGuard],
-        canActivateChild: [AuthGuard],
+        canActivate: [NoAuthGuard],
+        canActivateChild: [NoAuthGuard],
         component  : LayoutComponent,
         resolve    : {
             initialData: InitialDataResolver,
