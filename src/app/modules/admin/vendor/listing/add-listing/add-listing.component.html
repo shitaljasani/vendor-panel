@@ -21,14 +21,15 @@
              <div class='sideformView'>
                     <mat-label>Description</mat-label>
                         <mat-form-field>
-                        <input matInput placeholder="Enter Description"  required/>
+                            <textarea  matInput placeholder="Enter Description"  required></textarea>
                         </mat-form-field>
             </div>
              <div class='sideformView'>
                     <mat-label>Price</mat-label>
-                        <mat-form-field>
+                    <a>Price Option</a>
+                        <!-- <mat-form-field>
                         <input matInput placeholder="Enter Price"  required/>
-                        </mat-form-field>
+                        </mat-form-field> -->
             </div>
                 <!-- <div class='sideformView'>
                     <mat-label>Simple</mat-label>
@@ -69,6 +70,37 @@
                      
                         
                     </div> -->
+                    <div class='sideformView'>
+                        <mat-label>Photos</mat-label>
+                        <div class="height"></div><br>
+                        <div id = "imageListId">
+                          <div id="imageNo1" class = "listitemClass">
+                              <img src="assets/images/avatars/female-01.jpg" alt="">
+                          </div>
+                            
+                          <div id="imageNo2" class = "listitemClass">
+                              <img src="assets/images/avatars/female-01.jpg" alt="">
+                          </div>
+                        
+                          <div id="imageNo3" class = "listitemClass">
+                              <img src="assets/images/avatars/female-02.jpg" alt="">
+                          </div>
+                        
+                          <div id="imageNo4" class = "listitemClass">
+                              <img src="assets/images/avatars/female-03.jpg" alt="">
+                          </div>
+                        
+                          <div id="imageNo5" class = "listitemClass">
+                              <img src="assets/images/avatars/female-04.jpg" alt="">
+                          </div>
+                        
+                          <div id="imageNo6" class = "listitemClass">
+                              <img src="assets/images/avatars/female-05.jpg" alt="">
+                          </div>
+                        </div>
+                </div>
+
+                        
                     <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
                     >Submit</button>
 
@@ -79,44 +111,11 @@
                     <!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
 
                         <div class="example-box" *ngFor="let movie of movies" cdkDrag>
-                          <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
-                          {{movie}}
+                            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                            {{movie}}
                         </div>
                         
-                      </div> -->
-                      <div class="height"></div><br>
-                      <div id = "imageListId">
-                        <div id="imageNo1" class = "listitemClass">
-                            <img src="assets/images/avatars/female-01.jpg" alt="">
-                        </div>
-                          
-                        <div id="imageNo2" class = "listitemClass">
-                            <img src="assets/images/avatars/female-01.jpg" alt="">
-                        </div>
-                  
-                        <div id="imageNo3" class = "listitemClass">
-                            <img src="assets/images/avatars/female-02.jpg" alt="">
-                        </div>
-                  
-                        <div id="imageNo4" class = "listitemClass">
-                            <img src="assets/images/avatars/female-03.jpg" alt="">
-                        </div>
-                  
-                        <div id="imageNo5" class = "listitemClass">
-                            <img src="assets/images/avatars/female-04.jpg" alt="">
-                        </div>
-                  
-                        <div id="imageNo6" class = "listitemClass">
-                            <img src="assets/images/avatars/female-05.jpg" alt="">
-                        </div>
-                    </div>
-                          
-                    <div id="outputDiv">
-                        <b>Output of ID's of images : </b>
-                        <input id="outputvalues" type="text" value="" />
-                    </div>
-
-                      
+                    </div> -->
                 </form>
     </div>
 </div>

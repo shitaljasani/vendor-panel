@@ -73,11 +73,85 @@ auth-sign-up {
 .treo-theme-light .mat-step-header .mat-step-icon-selected, .treo-theme-light .mat-step-header .mat-step-icon-state-done, .treo-theme-light .mat-step-header .mat-step-icon-state-edit
 
 {
-    background-color: #595959!important;
+    background-color: #F56400!important;
 }
 // -----------------------------------------------------------------------------------------------------
 // @ Theming
 // -----------------------------------------------------------------------------------------------------
 @include treo-theme {
 
+}
+
+.registration-layout{
+    width: 100%;
+    .reg-left{
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
+    .reg-right{
+        margin: 30px 0;
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
+    mat-form-field{
+        width:100%;
+        border-radius: 100px;
+        border: 1px solid #bcbcbc;
+        background-color: #ffffff;
+        margin: 7px 0;
+        box-shadow:unset;
+      }
+    .add-btn{
+        margin-top: 12px;
+        width: 100%;
+        border-radius: 100px;
+        padding: 5px 0px;
+    }
+    .mat-step-label{
+        min-width:0px
+    }
+    h3{
+        text-align: center;
+    }
+    .upload-wrapper{
+        display: inline-block;
+        width: 48%;
+        .matlbl{
+            color: #222;
+            font-weight: 600;
+
+        }
+        .fileinput{
+            border: 2px dashed rgba(0, 0, 0, 0.5);
+
+            height: 100px;
+            width: 100%;
+            border-radius: 3px;
+            margin: 5px 0 16px 0;
+            position: relative;
+            .filedata{
+                height: 100px;
+                opacity: 0;
+            }
+            a{
+                position: absolute;
+                left: 50%;
+                top: 10%;
+                font-size: 39px;
+                font-weight: 500;
+                transform: translate(-50%, -10%);
+            }
+            p{
+                position: absolute;
+                left: 50%;
+                top: 70%;
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.5);
+                font-weight: 500;
+                transform: translate(-50%, -70%);
+            }
+        }
+    }
 }

@@ -8,7 +8,34 @@
 h1, h2, h3, h4, h5, p {
   margin: 0;
 }
-<<<<<<< HEAD
+
+.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex {
+  
+  border-color: unset!important;
+}
+
+.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex{
+  width:100%;
+  border-radius: 100px;
+  border: 1px solid #bcbcbc;
+  background-color: #ffffff;
+  min-height: 46px;
+  box-shadow:unset
+}
+.fl
+{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+.fullwidth{
+  width: 100% !important;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+  border-radius: 100px;
+}
 
 .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
   background-color: rgba(0, 0, 0, 0.54);
@@ -18,49 +45,18 @@ h1, h2, h3, h4, h5, p {
   background-color:rgba(0, 0, 0, 0.2)
 }
 
-=======
->>>>>>> 9105fccb4d0eec43d194adf67b67b1a3810bed39
 .mat-form-field.mat-form-field-appearance-fill {
     .mat-form-field-wrapper {
         margin-bottom: 0px;
     }
 }
-.header{
-  width:100%;
-  padding:20px;
-  border-bottom:1px solid  #cfd8e3;
-}
-.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex {
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  min-height: 48px;
-  border-radius: 3px;
-  padding: 0 16px;
-  border-width: 1px;
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
-  border-color: rgba(0, 0, 0, 0.15);
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-}
-.sideformView{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 20px 0px;
-    mat-label{
-     max-width: 100px;
-     width: -webkit-fill-available;
-      color: #222222;
-      font-weight: 600;
-    }
-    mat-form-field{
-      margin: 0 10px;
-      width:100%;
-    }
-  }
 
 .treo-theme-light .mat-form-field.mat-form-field-appearance-fill .mat-form-field-label{
   color: #222!important;
+}
+
+.round{
+  border-radius: 45px;
 }
 /* comman class (center part spacing) */
 .center-spacing {
@@ -101,18 +97,4 @@ h1, h2, h3, h4, h5, p {
     }
   }
 
-  @media only screen and (max-width: 600px) {
-    .sideformView{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-        mat-label{
-          width: 100%;
-        }
-        mat-form-field{
-          width: 100%;
-         
-        }
-      }
-  }
+ 
