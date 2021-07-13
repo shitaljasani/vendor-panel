@@ -3,10 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
 import { AuthUtils } from 'app/core/auth/auth.utils';
+import axios from 'axios';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class AuthService
 {
+    url = environment.endpoint;
     // Private
     private _authenticated: boolean;
 
@@ -43,6 +46,113 @@ export class AuthService
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------
+
+    async mobbileverify(data, cb) {
+        
+        // document.getElementById('loading').style.display = 'block';
+        // this.setToken();
+        axios.post(this.url + 'vendor/verify_mobile', data).then((res) => {
+            cb(res.data);
+           return of(res.data);
+        }).catch((error) => {
+                if (
+                    error.response &&
+                    error.response.status === 401 
+                ) {
+                    // this._authservice.signOut();
+                   cb(error);
+                } else {
+                    if (error.response) {
+                        cb(error.response.data);
+                    }
+                    if (!error.response) {
+                        cb(error);
+                    }
+                }
+            }).finally(()=>{
+                // document.getElementById('loading').style.display = 'none';
+            });
+    }
+
+    async sendotp(data, cb) {
+        
+        // document.getElementById('loading').style.display = 'block';
+        // this.setToken();
+        axios.post(this.url + 'vendor/verify_mobile', data).then((res) => {
+            cb(res.data);
+           return of(res.data);
+        }).catch((error) => {
+                if (
+                    error.response &&
+                    error.response.status === 401 
+                ) {
+                    // this._authservice.signOut();
+                   cb(error);
+                } else {
+                    if (error.response) {
+                        cb(error.response.data);
+                    }
+                    if (!error.response) {
+                        cb(error);
+                    }
+                }
+            }).finally(()=>{
+                // document.getElementById('loading').style.display = 'none';
+            });
+    }
+    async Uploadimage(data, cb) {
+        
+        // document.getElementById('loading').style.display = 'block';
+        // this.setToken();
+        axios.post(this.url + 'vendor/vendor_img_upload', data).then((res) => {
+            cb(res.data);
+           return of(res.data);
+        }).catch((error) => {
+                if (
+                    error.response &&
+                    error.response.status === 401 
+                ) {
+                    // this._authservice.signOut();
+                   cb(error);
+                } else {
+                    if (error.response) {
+                        cb(error.response.data);
+                    }
+                    if (!error.response) {
+                        cb(error);
+                    }
+                }
+            }).finally(()=>{
+                // document.getElementById('loading').style.display = 'none';
+            });
+    }
+
+    async Pincode( cb) {
+        
+        // document.getElementById('loading').style.display = 'block';
+        // this.setToken();
+        axios.get(this.url + 'vendor/get_pincode').then((res) => {
+            cb(res.data);
+           return of(res.data);
+        }).catch((error) => {
+                if (
+                    error.response &&
+                    error.response.status === 401 
+                ) {
+                    // this._authservice.signOut();
+                   cb(error);
+                } else {
+                    if (error.response) {
+                        cb(error.response.data);
+                    }
+                    if (!error.response) {
+                        cb(error);
+                    }
+                }
+            }).finally(()=>{
+                // document.getElementById('loading').style.display = 'none';
+            });
+    }
 
     /**
      * Sign in

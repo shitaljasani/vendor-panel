@@ -1,69 +1,69 @@
 @import 'treo';
 
-auth-sign-up {
+// auth-sign-up {
 
-    .content-layout {
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-        treo-card {
-            box-shadow: unset!important;
-            .form-container {
+//     .content-layout {
+//         align-items: center;
+//         justify-content: center;
+//         background-color: #fff;
+//         treo-card {
+//             box-shadow: unset!important;
+//             .form-container {
 
-                .form {
-                    width: 100%;
-                    min-width: 100%;
-                    max-width: 100%;
-                }
-                .upload-wrapper{
-                    display: inline-block;
-                    margin-right: 100px;
-                    .matlbl{
-                        color: #222;
-                        font-weight: 600;
+//                 .form {
+//                     width: 100%;
+//                     min-width: 100%;
+//                     max-width: 100%;
+//                 }
+//                 .upload-wrapper{
+//                     display: inline-block;
+//                     margin-right: 100px;
+//                     .matlbl{
+//                         color: #222;
+//                         font-weight: 600;
     
-                    }
-                    .fileinput{
-                        border: 1px solid #cfd8e3;
-                        height: 100px;
-                        width: 100%;
-                        border-radius: 3px;
-                        margin: 5px 0 16px 0;
-                        position: relative;
-                        background-color: #F0FBFD;
-                        .filedata{
-                            height: 100px;
-                            opacity: 0;
-                        }
-                        span{
-                            position: absolute;
-                            left: 40%;
-                            top: 15%;
-                            font-size: 39px;
-                            font-weight: 500;
-                        }
-                    }
-                }
-                .mat-step-header.mat-horizontal-stepper-header {
-                    height: auto;
-                    padding: 0;
-                    .mat-step-icon {
-                        margin-right:0px;
-                    }
-                    .mat-step-label {
-                        display: none;
-                    }
-                }
+//                     }
+//                     .fileinput{
+//                         border: 1px solid #cfd8e3;
+//                         height: 100px;
+//                         width: 100%;
+//                         border-radius: 3px;
+//                         margin: 5px 0 16px 0;
+//                         position: relative;
+//                         background-color: #F0FBFD;
+//                         .filedata{
+//                             height: 100px;
+//                             opacity: 0;
+//                         }
+//                         span{
+//                             position: absolute;
+//                             left: 40%;
+//                             top: 15%;
+//                             font-size: 39px;
+//                             font-weight: 500;
+//                         }
+//                     }
+//                 }
+//                 .mat-step-header.mat-horizontal-stepper-header {
+//                     height: auto;
+//                     padding: 0;
+//                     .mat-step-icon {
+//                         margin-right:0px;
+//                     }
+//                     .mat-step-label {
+//                         display: none;
+//                     }
+//                 }
                
 
-                .subtitle, .title {
-                    text-align: center;
-                    display: block !important;
-                }
-            }
-        }
-    }
-}
+//                 .subtitle, .title {
+//                     text-align: center;
+//                     display: block !important;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 .treo-theme-light .mat-step-header .mat-step-icon {
     background-color: #CBCCC9!important;
@@ -81,13 +81,30 @@ auth-sign-up {
 @include treo-theme {
 
 }
-
+treo-card{
+    max-width: 800px;
+    margin: auto!important;
+    box-shadow: unset!important;
+}
 .registration-layout{
+    padding: 20px 10px;
     width: 100%;
     .reg-left{
         display: inline-block;
         float: left;
         width: 50%;
+        .logo{
+            margin-top: 20px;
+            img{
+                height: 80px;
+                width: 80px;
+            }
+        }
+        .regbanner{
+            width: auto;
+            height: auto;
+            padding: 15% 15% 0;
+        }
     }
     .reg-right{
         margin: 30px 0;
@@ -103,11 +120,20 @@ auth-sign-up {
         margin: 7px 0;
         box-shadow:unset;
       }
+      .matlink{
+        text-decoration: underline;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 12px;
+        width: 100%;
+        text-align: right;
+      }
+
     .add-btn{
         margin-top: 12px;
         width: 100%;
         border-radius: 100px;
         padding: 5px 0px;
+        min-height: 48px;
     }
     .mat-step-label{
         min-width:0px
@@ -151,6 +177,8 @@ auth-sign-up {
                 color: rgba(0, 0, 0, 0.5);
                 font-weight: 500;
                 transform: translate(-50%, -70%);
+                width: 100%;
+                text-align: center;
             }
         }
     }

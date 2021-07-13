@@ -1,231 +1,162 @@
-<!-- <div class="content-layout fullwidth-basic-normal-scroll">
-    <treo-card class="auth-card thin">
-      
-        <div class="form-container">
-            <div class="form ">
-                
-                <div class="title">Registration</div>
-                <div class="subtitle mb-10">
-                    <span>Already have an account?</span>
-                    <a class="link"
-                       [routerLink]="['/sign-in']">Sign in</a>
-                </div>
-                <treo-message *ngIf="message" [appearance]="message.appearance" [showIcon]="message.showIcon"
-                    [type]="message.type" [@shake]="message.shake">
-                    {{message.content}}
-                </treo-message>
-                <mat-horizontal-stepper [linear]="isLinear" #stepper>
-                    <mat-step  [stepControl]="formNameGroup">
-                        <form [formGroup]="formNameGroup">
-                            <div class='sideformView'>
-                                <mat-label>Mobile number</mat-label>
-                                <mat-form-field>
-                                    <input matInput placeholder="Enter Mobile number" formControlName="mobilenumber" required>
-                                </mat-form-field>
 
-                            </div>
-                            <div class='sideformView'>
-
-                                <mat-label>Shop Owner Name</mat-label>
-                                <mat-form-field>
-                                    <input matInput placeholder="Enter Shop Owner Name" formControlName="ownername" required>
-                                </mat-form-field>
-                            </div>
-                            <div class='sideformView'>
-
-                                <mat-label>Shop Name</mat-label>
-                                <mat-form-field>
-                                    <input matInput placeholder="Enter Shop Name" formControlName="shopname" required>
-                                </mat-form-field>
-                            </div>
-                            <div class='sideformView'>
-                                <mat-label>Email</mat-label>
-                                <mat-form-field>
-                                    <input matInput placeholder="Enter Email" formControlName="email" required>
-                                </mat-form-field>
-                            </div>
-                            <div class='sideformView'>
-                                <mat-label>Password</mat-label>
-                                <mat-form-field>
-                                    <input matInput placeholder="Enter Password" formControlName="password" required>
-                                </mat-form-field>
-                            </div>
-                            <div class="flex gt-xs:flex-row flex-auto">
-                                <button class="add-btn mat-flat-button mat-primary" mat-flat-button
-                                    matStepperNext>Next</button>
-                            </div>
-                        </form>
-                    </mat-step>
-                    <mat-step [stepControl]="locationgroup">
-                        <form [formGroup]="locationgroup">
-                            <div class='upload-wrapper'>
-                              <label class='matlbl'>Shop Cover Image</label>
-                              <div class='fileinput'(click)="fileInput.click()">
-                              <input  class='filedata' hidden #fileInput type="file" id="file">
-                                <span>+ </span>
-                              </div>
-                            </div>
-                            <div class='upload-wrapper'>
-                              <label class='matlbl'>Shop Cover Image</label>
-                              <div class='fileinput'(click)="fileInput1.click()">
-                              <input  class='filedata' hidden #fileInput1 type="file" id="file1">
-                                <span>+ </span>
-                              </div>
-                            </div> 
-                            
-                           <div class='clear'></div>
-                        
-                        
-                           <div class='sideformView'>
-                               <mat-label>Address</mat-label>
-                               <mat-form-field>
-                                   <input matInput placeholder="Enter Address" formControlName="address" required>
-                               </mat-form-field>
-                            </div>
-                            <div class='sideformView'>
-                                <mat-label>Gst Number</mat-label>
-                                <mat-form-field>
-                                    <input matInput placeholder="Enter Gst Number" formControlName="GSTno" required>
-                                </mat-form-field>
-                            </div>
-                            <div class='sideformView'>
-                                <mat-label>Location</mat-label>
-                                <mat-form-field>
-                                    <input matInput placeholder="Enter Location" formControlName="location" required>
-                                </mat-form-field>
-                            </div>
-                            <div class="flex flex-row items-center">
-                                <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
-                                    matStepperNext>Next</button>
-                            </div>
-                        </form>
-                    </mat-step>
-
-                    <mat-step [stepControl]="verificationform">
-                        <form [formGroup]="verificationform">
-                            <div class="flex gt-xs:flex-row flex-auto">
-                              <div class='upload-wrapper'>
-                                <label class='matlbl'>Adhar Front image</label>
-                                <div class='fileinput'(click)="fileInput.click()">
-                                <input formControlName="adharfront" class='filedata' hidden #fileInput type="file" id="file">
-                                  <span>+ </span>
-                                </div>
-                              </div>
-                              <div class='upload-wrapper'>
-                                <label class='matlbl'>Adhar Back image</label>
-                                <div class='fileinput'(click)="fileInput1.click()">
-                                <input formControlName="adharback" class='filedata' hidden #fileInput1 type="file" id="file1">
-                                  <span>+ </span>
-                                </div>
-                              </div> 
-                              
-                             <div class='clear'></div>
-
-                            </div>
-                            <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
-                                (click)="signIn()">Submit</button>
-                        </form>
-                    </mat-step>
-                </mat-horizontal-stepper>
+<treo-card class="auth-card classic">
+    <div class="registration-layout">
+        <div class="reg-left">
+            <div class='logo'>
+                <img src='assets/images/avatars/logo.png'/>
+            </div>
+            <div class='regbanner'>
+                <img src='assets/images/avatars/registration.svg'/>
             </div>
         </div>
-    </treo-card>
+        <div class="reg-right">
+            <h3>Vendor Registration</h3>
+            <mat-horizontal-stepper  #stepper>
+                <mat-step  [stepControl]="formNameGroup">
+                    <form [formGroup]="formNameGroup">
+                        <mat-form-field class="round">
+                            <input maxlength="10" (keyup)="verify('mobile',$event)"  (keypress)='_globals.onlyallowNumber($event)' matInput placeholder="Enter Mobile number" formControlName="mobilenumber" required>
+                            <span class="refresh"><img src='assets/images/avatars/updated.png'/></span>
+                        </mat-form-field>
 
-</div> -->
-
-<div class="registration-layout">
-    <div class="reg-left">
-        zxczxc
-    </div>
-    <div class="reg-right">
-        <h3>Vendor Registration</h3>
-        <mat-horizontal-stepper  #stepper>
-            <mat-step  [stepControl]="formNameGroup">
-                <form [formGroup]="formNameGroup">
-                    <mat-form-field class="round">
-                        <input matInput placeholder="Enter Mobile number" formControlName="mobilenumber" required>
-                    </mat-form-field>
-                   
-                        <mat-form-field>
-                            <input matInput placeholder="Enter Shop Owner Name" formControlName="ownername" required>
+                        <mat-form-field class="round">
+                            <input maxlength="4" matInput placeholder="OTP Verify" (keypress)='_globals.onlyallowNumber($event)' formControlName="OTP" required>
+                            <!-- <span class="refresh"><img src='assets/images/avatars/updated.png'/></span> -->
+                            <!-- <span class="verify"><img src='assets/images/avatars/recycle.png'/></span> -->
+                            <!-- <a class='matlink'>resend OTP</a> -->
+                            <a class='matlink'>Resend OTP 0-59 sec</a>
                         </mat-form-field>
-                   
-                        <mat-form-field>
-                            <input matInput placeholder="Enter Shop Name" formControlName="shopname" required>
-                        </mat-form-field>
-                    
-                        <mat-form-field>
-                            <input matInput placeholder="Enter Email" formControlName="email" required>
-                        </mat-form-field>
-                  
-                        <mat-form-field>
-                            <input matInput placeholder="Enter Password" formControlName="password" required>
-                        </mat-form-field>
-                    
-                    <div class="flex gt-xs:flex-row flex-auto">
-                        <button class="add-btn mat-flat-button mat-primary" mat-flat-button
-                            matStepperNext>Next</button>
-                    </div>
-                </form>
-            </mat-step>
-            <mat-step [stepControl]="locationgroup">
-                <form [formGroup]="locationgroup">
-                    <div class='upload-wrapper fl'>
-                    
-                      <div class='fileinput'(click)="fileInput.click()">
-                      <input  class='filedata' hidden #fileInput type="file" id="file">
-                        <a>+ </a>
-                        <p>Shop cover image</p>
-                      </div>
-                    </div>
-                    <div class='upload-wrapper fr'>
-                    
-                      <div class='fileinput'(click)="fileInput1.click()">
-                      <input  class='filedata' hidden #fileInput1 type="file" id="file1">
-                        <a>+ </a>
-                        <p>Shop cover image</p>
-                      </div>
-                    </div> 
-                    
-                   <div class='clear'></div>
-                
-                
-                        <mat-form-field>
-                            <input matInput placeholder="GSTIN Number" formControlName="GSTno" required>
-                        </mat-form-field>
-                   
-                        <mat-form-field>
-                            <input matInput placeholder="Pincode" formControlName="location" required>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input matInput placeholder="City name" formControlName="location" required>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input matInput placeholder="State Name" formControlName="location" required>
-                        </mat-form-field>
-                    
-                    <div class="flex flex-row items-center">
-                        <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
-                            matStepperNext>Next</button>
-                    </div>
-                </form>
-            </mat-step>
-            <mat-step [stepControl]="locationgroup">
-                <form [formGroup]="locationgroup">
-                    <div class='upload-wrapper fl'>
-                    
-                      <div class='fileinput'(click)="fileInput.click()">
-                      <input  class='filedata' hidden #fileInput type="file" id="file">
-                        <a>+ </a>
-                        <p>Cancel Check Image</p>
-                      </div>
-                    </div>
+                       
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Shop Owner Name" formControlName="ownername" required>
+                            </mat-form-field>
+                       
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Shop Name" formControlName="shopname" required>
+                            </mat-form-field>
+                        
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Email" formControlName="email" required>
+                            </mat-form-field>
+                      
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Password" formControlName="password" required>
+                            </mat-form-field>
+                        
+                        <div class="flex gt-xs:flex-row flex-auto">
+                            <button class="add-btn mat-flat-button mat-primary" mat-flat-button
+                                matStepperNext>Continue</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="locationgroup">
+                    <form [formGroup]="locationgroup">
+                        <div class='upload-wrapper fl'>
+                        
+                          <div class='fileinput'(click)="fileInput.click()">
+                          <input  class='filedata' hidden #fileInput type="file" (change)="UploadImage($event,'shop1')" id="file">
+                            <a>+ </a>
+                            <p>Shop cover image</p>
+                          </div>
+                        </div>
+                        <div class='upload-wrapper fr'>
+                        
+                          <div class='fileinput'(click)="fileInput1.click()">
+                          <input  class='filedata' hidden #fileInput1 type="file" (change)="UploadImage($event,'shop2')" id="file1">
+                            <a>+ </a>
+                            <p>Shop cover image</p>
+                          </div>
+                        </div> 
+                        
+                       <div class='clear'></div>
                     
                     
-                   <div class='clear'></div>
-                
-                
-                        <mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="GSTIN Number" formControlName="GSTno" required>
+                            </mat-form-field>
+                       
+                            <mat-form-field>
+                                <input matInput placeholder="Pincode" formControlName="pincode" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="City name" formControlName="city" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="State Name" formControlName="state" required>
+                            </mat-form-field>
+                        
+                        <div class="flex flex-row items-center">
+                            <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
+                                matStepperNext>Continue</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="locationgroup">
+                    <form [formGroup]="locationgroup">
+                        <div class='upload-wrapper fl'>
+                        
+                          <div class='fileinput'(click)="fileInput.click()">
+                          <input  class='filedata' hidden #fileInput type="file" (change)="UploadImage($event,'cancel')" id="file">
+                            <a>+ </a>
+                            <p>Cancel Check Image</p>
+                          </div>
+                        </div>
+                        
+                        
+                       <div class='clear'></div>
+                    
+                    
+                            <mat-form-field>
+                                <input matInput placeholder="Bank Name" formControlName="GSTno" required>
+                            </mat-form-field>
+                       
+                            <mat-form-field>
+                                <input matInput placeholder="Account Number" formControlName="location" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="IFSC Code" formControlName="location" required>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Account Holder Name" formControlName="location" required>
+                            </mat-form-field>
+                        
+                        <div class="flex flex-row items-center">
+                            <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
+                                matStepperNext>Continue</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="verificationform">
+                    <form [formGroup]="verificationform">
+                        
+                            <div class='upload-wrapper fl'>
+                        
+                                <div class='fileinput'(click)="fileInput.click()">
+                                <input  class='filedata' hidden #fileInput (change)="UploadImage($event,'shop3')" type="file" id="file">
+                                  <a>+ </a>
+                                  <p>Shop cover image</p>
+                                </div>
+                              </div>
+                              <div class='upload-wrapper fr'>
+                              
+                                <div class='fileinput'(click)="fileInput1.click()">
+                                <input  class='filedata' hidden #fileInput1 type="file" (change)="UploadImage($event,'profile')" id="file1">
+                                  <a>+ </a>
+                                  <p>Your Profile image</p>
+                                </div>
+                            </div>
+                          
+                         <div class='clear'></div>
+                         <div class='upload-wrapper fullwidth'>
+                        
+                            <div class='fileinput'(click)="fileInput.click()">
+                            <input  class='filedata' hidden #fileInput type="file" id="file">
+                              <a>+ </a>
+                              <p>Shop cover image</p>
+                            </div>
+                          </div>
+                          <div class='clear'></div>
+                         <mat-form-field>
                             <input matInput placeholder="Bank Name" formControlName="GSTno" required>
                         </mat-form-field>
                    
@@ -239,62 +170,13 @@
                             <input matInput placeholder="Account Holder Name" formControlName="location" required>
                         </mat-form-field>
                     
-                    <div class="flex flex-row items-center">
+                       
                         <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
-                            matStepperNext>Next</button>
-                    </div>
-                </form>
-            </mat-step>
-            <mat-step [stepControl]="verificationform">
-                <form [formGroup]="verificationform">
-                    
-                        <div class='upload-wrapper fl'>
-                    
-                            <div class='fileinput'(click)="fileInput.click()">
-                            <input  class='filedata' hidden #fileInput type="file" id="file">
-                              <a>+ </a>
-                              <p>Shop cover image</p>
-                            </div>
-                          </div>
-                          <div class='upload-wrapper fr'>
-                          
-                            <div class='fileinput'(click)="fileInput1.click()">
-                            <input  class='filedata' hidden #fileInput1 type="file" id="file1">
-                              <a>+ </a>
-                              <p>Your Profile image</p>
-                            </div>
-                        </div>
-                      
-                     <div class='clear'></div>
-                     <div class='upload-wrapper fullwidth'>
-                    
-                        <div class='fileinput'(click)="fileInput.click()">
-                        <input  class='filedata' hidden #fileInput type="file" id="file">
-                          <a>+ </a>
-                          <p>Shop cover image</p>
-                        </div>
-                      </div>
-                      <div class='clear'></div>
-                     <mat-form-field>
-                        <input matInput placeholder="Bank Name" formControlName="GSTno" required>
-                    </mat-form-field>
-               
-                    <mat-form-field>
-                        <input matInput placeholder="Account Number" formControlName="location" required>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput placeholder="IFSC Code" formControlName="location" required>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput placeholder="Account Holder Name" formControlName="location" required>
-                    </mat-form-field>
-                
-                   
-                    <button class="add-btn mat-flat-button mat-primary ml-2" mat-flat-button
-                        (click)="signIn()">Submit</button>
-                </form>
-            </mat-step>
-        </mat-horizontal-stepper>
+                            (click)="signIn()">Submit</button>
+                    </form>
+                </mat-step>
+            </mat-horizontal-stepper>
+        </div>
+        <div class="clear"></div>
     </div>
-    <div class="clear"></div>
-</div>
+</treo-card>

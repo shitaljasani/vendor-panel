@@ -14,7 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AuthSignInComponent implements OnInit
 {
     signInForm: FormGroup;
-    message: any;
+    
     isotp=false
 
     /**
@@ -33,7 +33,7 @@ export class AuthSignInComponent implements OnInit
     )
     {
         // Set the defaults
-        this.message = null;
+        
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -68,8 +68,7 @@ export class AuthSignInComponent implements OnInit
         // Disable the form
         this.signInForm.disable();
 
-        // Hide the message
-        this.message = null;
+
 
         // Get the credentials
         const credentials = this.signInForm.value;
@@ -92,14 +91,7 @@ export class AuthSignInComponent implements OnInit
                 // Re-enable the form
                 this.signInForm.enable();
 
-                // Show the error message
-                this.message = {
-                    appearance: 'outline',
-                    content   : response.error,
-                    shake     : true,
-                    showIcon  : false,
-                    type      : 'error'
-                };
+               
             });
     }
 }

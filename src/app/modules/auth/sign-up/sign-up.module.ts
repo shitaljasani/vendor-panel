@@ -12,10 +12,11 @@ import { SharedModule } from 'app/shared/shared.module';
 import { AuthSignUpComponent } from 'app/modules/auth/sign-up/sign-up.component';
 import { authSignupRoutes } from 'app/modules/auth/sign-up/sign-up.routing';
 import {MatStepperModule} from '@angular/material/stepper';
+import { Globals } from '../../../Globlevalidation';
 @NgModule({
     declarations: [
-        AuthSignUpComponent
-    ],
+        AuthSignUpComponent,
+          ],
     imports     : [
         RouterModule.forChild(authSignupRoutes),
         MatButtonModule,
@@ -27,8 +28,10 @@ import {MatStepperModule} from '@angular/material/stepper';
         TreoCardModule,
         TreoMessageModule,
         SharedModule,
-        MatStepperModule
-    ]
+        MatStepperModule,
+        
+    ],
+    providers: [ Globals ],
 })
 export class AuthSignUpModule
 {

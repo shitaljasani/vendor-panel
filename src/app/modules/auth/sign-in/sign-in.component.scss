@@ -1,68 +1,61 @@
 @import 'treo';
 
-auth-sign-in {
 
-    .content-layout {
-        align-items: center;
-        justify-content: center;
-
-        treo-card {
-
-            .form-container {
-
-                .form {
-                    width: 100%;
-                    min-width: 100%;
-                    max-width: 100%;
-                }
-                .upload-wrapper{
-                    display: inline-block;
-                    margin-right: 100px;
-                    .matlbl{
-                        color: #27303f;
-                        font-weight: 500;
-    
-                    }
-                    .fileinput{
-                        border: 1px solid #e2e8f0;
-                        height: 100px;
-                        width: 100%;
-                        border-radius: 6px;
-                        margin: 5px 0 16px 0;
-                        position: relative;
-                        .filedata{
-                            height: 100px;
-                            opacity: 0;
-                        }
-                        span{
-                            position: absolute;
-                            left: 40%;
-                            top: 15%;
-                            font-size: 39px;
-                            font-weight: 500;
-                        }
-                    }
-                }
-                .mat-step-header.mat-horizontal-stepper-header {
-                    height: auto;
-                    padding: 0;
-                    .mat-step-icon {
-                        margin-right:0px;
-                    }
-                    .mat-step-label {
-                        display: none;
-                    }
-                }
-               
-
-                .subtitle, .title {
-                    text-align: center;
-                }
+treo-card{
+    max-width: 800px;
+    margin: auto!important;
+    box-shadow: unset!important;
+}
+.registration-layout{
+    padding: 20px 10px;
+    width: 100%;
+    .reg-left{
+        display: inline-block;
+        float: left;
+        width: 50%;
+        .logo{
+            margin-top: 20px;
+            img{
+                height: 80px;
+                width: 80px;
             }
         }
+        .regbanner{
+            width: auto;
+            height: auto;
+            padding: 15% 15% 0;
+        }
     }
+    .reg-right{
+        margin: 30px 0;
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
+    mat-form-field{
+        width:100%;
+        border-radius: 100px;
+        border: 1px solid #bcbcbc;
+        background-color: #ffffff;
+        margin: 7px 0;
+        box-shadow:unset;
+      }
+    .add-btn{
+        margin-top: 12px;
+        width: 100%;
+        border-radius: 100px;
+        padding: 5px 0px;
+        min-height: 48px;
+    }
+    .mat-step-label{
+        min-width:0px
+    }
+    h3{
+        text-align: center;
+        margin: 20px 0;
+    }
+   
 }
-
 
 // -----------------------------------------------------------------------------------------------------
 // @ Theming
